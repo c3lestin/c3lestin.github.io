@@ -22,7 +22,7 @@ Now let's say you had DSC configuration implemented in your system, in that case
 A DSC configuration is nothing more than a special kind of powershell function, as you can see below it is pretty straight forward.
 
 ``` powershell
-Configuration *config_name*
+Configuration `config_name`
 {
    Import-DscResource -Module PSDesiredStateConfiguration
    Node *node_name*
