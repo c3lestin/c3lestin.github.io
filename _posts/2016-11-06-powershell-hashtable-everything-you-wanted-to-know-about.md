@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Powershell: Everything you wanted to know about hashtables"
-date: 2016-11-06
-tags: [PowerShell,Hashtables,Everything]
+title: "Powershell: DSC Configuration"
+date: 2020-25-08
+tags: [PowerShell,DSC,Everything]
 share-img: "/img/share-img/2016-11-06-powershell-hashtable-everything-you-wanted-to-know-about.png"
 ---
 
-I want to take a step back and talk about [hashtables](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables). I use these all the time now. I was teaching someone about them after our user group meeting last night and I realized I had the same confusion about them at first that he had. Hashtables are really important in Powershell so it is good to have a solid understanding of them.<!--more-->
+Desired State Configuration [(DSC)](https://docs.microsoft.com/en-us/powershell/scripting/dsc/getting-started/wingettingstarted?view=powershell-7) automates administrations and make it less an hassle, it decreases the complexity of scripting in windows and Linux systems and increase the speed of iteration, it is basically configuration as code (Infrastructure As Code). This feature is available beginning the release of powershell version 4.<!--more-->
 
 # Index
 
