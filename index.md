@@ -1,8 +1,10 @@
 ---
 layout: page
 title:  PowerShell Automation
-subtitle: with Marckenley Celestin
+subtitle: With Marckenley Celestin
 ---
+
+" One single vulnerability is all an attacker needs. " - Window Snyder
 
 # Recent Articles
 Find all of the fresh goodies here.
