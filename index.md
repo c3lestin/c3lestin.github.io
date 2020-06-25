@@ -6,7 +6,7 @@ subtitle: with Marckenley Celestin
 
 # Recent Articles
 Find all of the fresh goodies here.
-
+{% include recent-posts.md %}* [More](sitemap/?utm_source=blog&utm_medium=blog&utm_content=recent)
 
 # What is PowerShell DSC ?
 Desired State Configuration automates administrations and make it less an hassle, it decreases the complexity of scripting in windows and Linux systems and increase the speed of iteration, it is basically configuration as code (Infrastructure As Code). This feature is available beginning the release of powershell version 4.
