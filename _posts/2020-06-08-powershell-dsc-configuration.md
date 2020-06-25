@@ -41,8 +41,7 @@ Configuration myconfig
 This name could be any name, we called it above `myconfig`.
 
 ``` posh
-   myconfig
-
+myconfig
 ```
 
 
@@ -51,7 +50,7 @@ This name could be any name, we called it above `myconfig`.
 We then apply our configuration with the following cmdlet.
 
 ``` posh
-   Start-DscConfiguration myconfig
+Start-DscConfiguration myconfig
 ```
 
 
