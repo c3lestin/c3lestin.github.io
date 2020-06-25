@@ -1,22 +1,28 @@
 # --- Basic options --- #
 
 # Name of website
-title: CYBERSHELTER
+title: Cybershelter
 
 # Short description of your site
-description: A virtual proof that I'm awesome
+description: Be an eternal student, learn for fun.
 
 # Your name to show in the footer
-author: Some Person
+author: C3lestin
 
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  About Me: "aboutme"
+  About Me: "aboutme/?utm_source=blog&utm_medium=blog&utm_content=navbar"
+  Blog: 
+    - Posts: "blog/?utm_source=blog&utm_medium=blog&utm_content=navbar"
+    - Search: "search/?utm_source=blog&utm_medium=blog&utm_content=navbar"
+    - Tags: "tags/?utm_source=blog&utm_medium=blog&utm_content=navbar"
+    - RSS: "feed.xml"
   Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+    - SiteMap: "sitemap/?utm_source=blog&utm_medium=blog&utm_content=navbar"
+    - MSSQL Server: "sql/?utm_source=blog&utm_medium=blog&utm_content=navbar"
+    - GitHub Pages: "https://pages.github.com/"
+  Home: "?utm_source=blog&utm_medium=blog&utm_content=navbar"
 
 # --- Logo --- #
 
@@ -29,7 +35,7 @@ round-avatar: true
 
 # If you want to have an image logo in the top-left corner instead of the title text,
 # then specify the following parameter
-#title-img: /path/to/image
+# title-img: /assets/img/logo.png
 
 
 # --- Footer options --- #
@@ -70,7 +76,7 @@ share-links-active:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "MyWebsite.com"
+url-pretty: "cybershelter.be"
 
 # Create a "tags" index page and make tags on each post clickable
 link-tags: true
@@ -82,14 +88,14 @@ excerpt_length: 50
 
 # Personalize the colors in your website. Colour values can be any valid CSS colour
 
-navbar-col: "#F5F5F5"
-navbar-text-col: "#404040"
-navbar-border-col: "#EAEAEA"
-page-col: "#FFFFFF"
+navbar-col: "#252525"
+navbar-text-col: "#979899"
+navbar-border-col: "#252525"
+page-col: "#2d2e2e"
 link-col: "#008AFF"
-hover-col: "#0085A1"
-footer-col: "#F5F5F5"
-footer-text-col: "#777777"
+hover-col: "#22B573"
+footer-col: "#252525"
+footer-text-col: "#979899"
 footer-link-col: "#404040"
 
 # Alternatively, the navbar, footer, and page background can be set to use background images
