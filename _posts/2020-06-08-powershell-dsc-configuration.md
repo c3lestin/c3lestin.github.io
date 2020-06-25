@@ -21,7 +21,7 @@ Now let's say you had DSC configuration implemented in your system, in that case
 # Structure of a DSC configuration
 A DSC configuration is nothing more than a special kind of powershell function, as you can see below it is pretty straight forward.
 
-``` powershell
+``` posh
 Configuration myconfig
 {
    Import-DscResource -Module PSDesiredStateConfiguration
@@ -35,11 +35,20 @@ Configuration myconfig
    }
 }
 ```
+
+
 # Run a DSC configuration
-`myconfig`
+
+``` posh
+myconfig
+```
+
 
 # Apply a DSC configuration
-Start-DscConfiguration `myconfig`
+
+``` posh
+Start-DscConfiguration myconfig
+```
 
 
 
