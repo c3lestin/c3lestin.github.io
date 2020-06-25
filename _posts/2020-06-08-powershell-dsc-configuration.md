@@ -39,12 +39,16 @@ Configuration myconfig
 
 # Run a DSC configuration
 
+This name could be any name, we called it above `myconfig`.
+
 ``` posh
 myconfig
 ```
 
 
 # Apply a DSC configuration
+
+We then apply our configuration with the following cmdlet.
 
 ``` posh
 Start-DscConfiguration myconfig
