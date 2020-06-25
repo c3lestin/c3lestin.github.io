@@ -18,5 +18,25 @@ Let's say you have configured your systems and everything is working fine, you w
 
 Now let's say you had DSC configuration implemented in your system, in that case the changes that your fellow engineers made on the system while you were on vacation DSC would have take care of them by making sure that the system configuration get reverted to it's original state.
 
+# Structure of a DSC configuration
+A DSC configuration is nothing more than a special kind of powershell function, as you can see below it is pretty straight forward.
+
+```
+Configuration <name of your configuration>
+{
+   Import-DscResource -Module PSDesiredStateConfiguration
+  
+   Node <Node name>
+   {
+      
+      WindowsFeature <Example of a role>
+      {
+          Ensure      = "Present"
+          Name        = "Web-Server"
+          
+      }
+   }
+}
+```
 
 
