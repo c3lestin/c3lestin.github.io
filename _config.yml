@@ -50,13 +50,13 @@ title-img: /assets/img/logo.png
 # Uncomment the links you want to show and add your information to each one.
 # If you don't want to show a link to an RSS feed, set rss to "false".
 social-network-links:
-  email: "someone@example.com"
-  facebook: deanattali
-  github: daattali
-  twitter: daattali
+  email: "celestin@cybershelter.be"
+  #facebook: deanattali
+  github: c3lestin
+  #twitter: daattali
   rss: true
 #  reddit: yourname
-#  linkedin: daattali
+  linkedin: cybershelter
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
@@ -75,8 +75,8 @@ social-network-links:
 
 # Select which social network share links to show in posts
 share-links-active:
-  twitter: true
-  facebook: true
+  twitter: false
+  facebook: false
   linkedin: true
   vk: false
 
