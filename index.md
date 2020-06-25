@@ -13,7 +13,7 @@ Find all of the fresh goodies here.
 # Language Reference Pages
 
 
-# Doing stuff with PowerShell
+# Network Security Best Practice
 
 In this collection of articles, I cover specific tasks that can be performed with PowerShell. These are the common things that you will run into as you start to use PowerShell. The more advanced topics can be found by using the links in the more section.
 
