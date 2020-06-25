@@ -12,7 +12,7 @@ author: C3lestin
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  # About Me: "aboutme/?utm_source=blog&utm_medium=blog&utm_content=navbar"
+  About Me: "aboutme/?utm_source=blog&utm_medium=blog&utm_content=navbar"
   Security:
     - Pentesting: "blog/?utm_source=blog&utm_medium=blog&utm_content=navbar"
   Automation:
