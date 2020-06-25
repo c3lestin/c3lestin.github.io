@@ -313,7 +313,7 @@ img {
 
 .navbar-custom .avatar-container {
   position: absolute;
-  left: 55px;
+  left: 2rem;
   /*--- left: 50%; ---*/
   width: 3.125rem;
   margin-top: 1.75rem;
