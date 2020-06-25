@@ -22,12 +22,12 @@ Now let's say you had DSC configuration implemented in your system, in that case
 A DSC configuration is nothing more than a special kind of powershell function, as you can see below it is pretty straight forward.
 
 ``` powershell
-Configuration `config_name`
+Configuration myconfig
 {
    Import-DscResource -Module PSDesiredStateConfiguration
-   Node *node_name*
+   Node mynode
    {
-      WindowsFeature *role_name*
+      WindowsFeature myrole
       {
           Ensure      = "Present"
           Name        = "Web-Server"  
@@ -35,7 +35,11 @@ Configuration `config_name`
    }
 }
 ```
+# Run a DSC configuration
+`myconfig`
 
+# Apply a DSC configuration
+Start-DscConfiguration `myconfig`
 
 
 
