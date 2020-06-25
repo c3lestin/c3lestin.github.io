@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: home
 title: DSC Configuration Explained
 subtitle: With Marckenley Celestin
 share-img: "/img/share-img/index.png"
