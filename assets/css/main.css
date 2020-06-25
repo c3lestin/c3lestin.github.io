@@ -13,9 +13,9 @@ html {
 body {
   font-family: 'Lora', 'Times New Roman', serif;
   font-size: 1.125rem;
-  color: #404040;
+  color: #b0b1b2;
   position: relative;
-  background-color: {{ site.page-col | default: "#FFFFFF" }};
+  background-color: {{ site.page-col | default: "#2d2e2e" }};
   {% if site.page-img %}
   background-image: url({{ site.page-img | relative_url }});
   background-attachment: fixed;
@@ -47,7 +47,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: {{ site.hover-col | default: "#0085A1" }};
+  color: {{ site.hover-col | default: "#22B573" }};
 }
 blockquote {
   color: #808080;
@@ -127,7 +127,7 @@ img {
 
 .navbar-custom {
   background-color: {{ site.navbar-col | default: "#F5F5F5" }};
-  border-bottom: 1px solid {{ site.navbar-border-col | default: "#EAEAEA" }};
+  border-bottom: 1px solid {{ site.navbar-border-col | default: "#252525" }};
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   {% if site.navbar-img %}
     background-image: url({{ site.navbar-img | relative_url }});
@@ -183,7 +183,7 @@ img {
 .navbar-custom .navbar-nav .nav-link:focus,
 .navbar-custom .navbar-nav .dropdown-item:hover,
 .navbar-custom .navbar-nav .dropdown-item:focus {
-  color: {{ site.hover-col | default: "#0085A1" }};
+  color: {{ site.hover-col | default: "#22B573" }};
 }
 
 .navbar-custom .navbar-nav .nav-item {
@@ -374,7 +374,7 @@ img {
 
 footer {
   padding: 1.875rem 0;
-  border-top: 1px #EAEAEA solid;
+  border-top: 1px #252525 solid;
   margin-top: 3.125rem;
   font-size: 0.875rem;
   background-color: {{ site.footer-col | default: "#F5F5F5" }};
@@ -803,6 +803,7 @@ table tr td :last-child {
 
 /* --- Code blocks --- */
 
+
 pre {
   font-size: 1rem;
   line-height: 1.5;
@@ -815,8 +816,9 @@ pre {
   margin: 0;
 }
 .highlight > pre {
-  background-image: linear-gradient(
-    rgba(0,0,0,0.06), rgba(0,0,0,0.06) 1.5em, rgba(0,0,0,0.03) 1.5em, rgba(0,0,0,0.03) 3em);
+ /* --- background-image: linear-gradient(
+    rgba(0,0,0,0.06), rgba(0,0,0,0.06) 1.5em, rgba(0,0,0,0.03) 1.5em, rgba(0,0,0,0.03) 3em); --- */
+  background-color:rgb(29 29 29);
   background-size: auto 3em;
   background-position-y: 0.625rem;
   border: 1px solid rgba(0,0,0,0.1);
@@ -835,6 +837,10 @@ pre {
   color: rgba(0,0,0,0.3);
   border-radius: 0;
   border-right: 2px solid #444;
+}
+
+pre code {
+    color: #adb5bd;
 }
 
 /* Make line numbers unselectable: excludes line numbers from copy-paste user ops */
