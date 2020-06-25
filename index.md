@@ -1,7 +1,7 @@
 ---
 layout: page
-title: DSC Configuration Explained
-subtitle: With Marckenley Celestin
+title: Desired State Configuration
+subtitle: Marckenley Celestin
 share-img: "/img/share-img/index.png"
 ---
 
