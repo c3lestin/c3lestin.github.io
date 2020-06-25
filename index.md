@@ -5,7 +5,7 @@ subtitle: With Marckenley Celestin
 ---
 
 
-Microsoft Windows PowerShell is an object-oriented scripting language that can be used to do real system automation, it also  can be used as a day to day tool, PowerShell  is one of the  best automation languages out there for systems administrators. Topics covered on this page show only how to use the tool for automation. If you are a beginner or want to improve your powershell skill, here is a great blog from  [Kevin Marquette](https://powershellexplained.com/) that can help you do just that. 
+Microsoft Windows PowerShell is an object-oriented scripting language that can be used for system automation or simply as a day to day tool, it is one of the  best automation languages out there for systems admins. Topics covered on this page only show how to use the tool for automation. If you are a beginner or just want to improve your powershell skill, here is a great blog from  [Kevin Marquette](https://powershellexplained.com/) that can help you do just that. 
 
 
 
