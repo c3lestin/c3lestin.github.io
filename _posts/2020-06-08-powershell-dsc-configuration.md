@@ -39,11 +39,13 @@ Configuration myconfig
 {:.box-note}
 **myconfig** is the name of the configuration, **mynode** is the machine the configuration will be applied to, **myrole** is the resource we will configure on the target node.
 
+<br>
+
 # Key Components of DSC
 Working with DSC will have you familiar with the following terms such as:
 
-- DSC Resources
-- DSC Configurations
-- LCM (Local Configuration Manager)
-- Pull Model
-- Push Model
+## - DSC Resources
+## - DSC Configurations
+## - LCM (Local Configuration Manager)
+## - Pull Model
+## - Push Model
