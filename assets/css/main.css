@@ -525,8 +525,8 @@ footer .footer-custom-content {
 
 .blog-tags a:hover {
   border-radius: 2px;
-  color: {{ site.hover-col | default: "#0085A1" }};
-  background-color: #EEE;
+  color: {{ site.hover-col | default: "#252525" }};
+  background-color: #737577;
 }
 
 .post-preview .blog-tags {
