@@ -925,3 +925,28 @@ pre code {
   font-style: italic;
   font-size: 1rem;
 }
+
+/* google search gsc css */
+
+input#gsc-i-id1.gsc-input {
+    width: 100%;
+    padding: 0px;
+    border: none;
+    margin: 0px;
+    height: auto;
+    background: url(https://www.google.com/cse/static/images/1x/en/branding.png) left center no-repeat rgba(0,0,0,0.2);
+    outline: none;
+    border-radius: .25rem;
+}
+
+button.gsc-search-button.gsc-search-nutton-v2 {
+    font-size: 0;
+    padding: 6px 27px;
+    width: auto;
+    vertical-align: middle;
+    border: 1px solid #666;
+    border-radius: 2px;
+    border-color: #28a745;
+    background-color: #22b573;
+
+}
