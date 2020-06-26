@@ -44,15 +44,15 @@ Configuration myconfig
 # Key Components of DSC
 Working with DSC will have you familiar with the following terms such as:
 
- * DSC `Resources`
- * DSC `Configurations`
- * `LCM` (Local Configuration Manager)
+ * `DSC Resources`
+ * `DSC Configurations`
+ * `LCM (Local Configuration Manager)`
  * `Pull Model`
  * `Push Model`
  
  <br>
  ## DSC Resources
- Desired State Configuration (DSC) Resources provide the building blocks for a DSC configuration. A resource exposes properties that can be configured (schema) and contains the PowerShell script functions that the Local Configuration Manager (LCM) calls to what Microsoft call the `"make it so"` phase.
+ Desired State Configuration (DSC) Resources provide the building blocks for a DSC configuration. A resource exposes properties that can be configured (schema) and contains the  PowerShell script functions that the Local Configuration Manager (LCM) calls to what Microsoft call the "make it so" phase.
  
  ## DSC Configurations
  Configurations are codes that define what the resources should do and should consists of the following parts:
