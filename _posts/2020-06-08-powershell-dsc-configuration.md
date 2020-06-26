@@ -56,10 +56,24 @@ Desired State Configuration Resources provide the building blocks for a DSC conf
  
 ## DSC Configurations
  
- Configurations are codes that define what the resources should do and should consists of the following parts:
+ Configurations are codes that define what the resources should do, they consists of the following parts:
 
 * The Configuration block.
 * One or more Node blocks.
 * One or more resource blocks.
  
- 
+## LCM (Local Configuration Manager)
+
+The Local Configuration Manager `LCM` is the engine of Desired State Configuration (DSC). The LCM runs on every target node, and is responsible for parsing and enacting configurations that are sent to the node. It is also responsible for a number of other aspects of DSC, including the following.
+
+* Determining refresh mode (push or pull).
+* Specifying how often a node pulls and enacts configurations.
+* Associating the node with pull service.
+* Specifying partial configurations.
+
+## Pull Server or Pull Model
+In pull mode, pull clients are configured to get their desired state configurations from a remote pull service. 
+
+![pull_mode](_img/pull_mode.png)
+
+
