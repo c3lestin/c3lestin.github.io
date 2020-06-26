@@ -39,7 +39,6 @@ Configuration myconfig
 {:.box-note}
 **myconfig** is the name of the configuration, **mynode** is the machine the configuration will be applied to, **myrole** is the resource we will configure on the target node.
 
-<br>
 
 # Key Components of DSC
 
@@ -62,4 +61,5 @@ Desired State Configuration Resources provide the building blocks for a DSC conf
 * The Configuration block.
 * One or more Node blocks.
 * One or more resource blocks.
+ 
  
