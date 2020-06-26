@@ -19,7 +19,7 @@ layout: feed
 			<title>{{ post.title }}</title>
 			<link href="http://c3lestin.github.io{{ post.url }}"/>
 			<updated>{{ post.date | date_to_xmlschema }}</updated>
-			<id>https://powershellexplained.com{{ post.id }}</id>
+			<id>https://c3lestin.github.io{{ post.id }}</id>
 			<content type="html">{{ post.content | xml_escape }}</content>
 		</entry>
 	{% endfor %}
