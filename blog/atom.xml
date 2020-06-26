@@ -5,8 +5,8 @@ layout: feed
 <feed xmlns="http://www.w3.org/2005/Atom">
 
 	<title>Kevin Marquette's Blog</title>
-	<link href="https://powershellexplained.com/blog/atom.xml" rel="self"/>
-	<link href="https://powershellexplained.com/blog"/>
+	<link href="https://powershellexplained.com/blogatom.xml" rel="self"/>
+	<link href="https://powershellexplained.comblog"/>
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
 	<id>https://powershellexplained.comblog</id>
 	<author>
