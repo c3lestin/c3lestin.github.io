@@ -8,7 +8,7 @@ title: All posts and pages
 {% for post in site.posts %}
 <tr>
     <td> {{ post.date | date: "%m/%d/%Y" }} </td>
-    <td><a href="http://kevinmarquette.github.io{{ post.url | remove: 'index.html' }}">{{ post.title }}</td> 
+    <td><a href="http://c3lestin.github.io{{ post.url | remove: 'index.html' }}">{{ post.title }}</td> 
     <td>{% for tag in post.tags %} {{ tag }} {% endfor %}</td>
 
 </tr>    
@@ -16,6 +16,6 @@ title: All posts and pages
 </table>
 <h3>All Pages</h3>
 {% for page in site.pages %} {% if page.layout != nil %} {% if page.layout != 'feed' %}
-<br /> <a href="http://kevinmarquette.github.io{{ post.url | remove: 'index.html' }}">{{ post.title }}</a>
+<br /> <a href="http://c3lestin.github.io{{ post.url | remove: 'index.html' }}">{{ post.title }}</a>
 {% endif %} {% endif %} {% endfor %}
 
