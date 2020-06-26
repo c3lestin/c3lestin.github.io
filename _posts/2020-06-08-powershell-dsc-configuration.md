@@ -44,11 +44,11 @@ Configuration myconfig
 
 Working with DSC will have you familiar with the following terms such as:
 
-** `DSC Resources`
-** `DSC Configurations`
-** `LCM (Local Configuration Manager)`
-** `Pull Model`
-** `Push Model`
+* `DSC Resources`
+* `DSC Configurations`
+* `LCM (Local Configuration Manager)`
+* `Pull Model`
+* `Push Model`
  
 ## DSC Resources
  
