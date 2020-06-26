@@ -74,6 +74,6 @@ The Local Configuration Manager `LCM` is the engine of Desired State Configurati
 ## Pull Server or Pull Model
 In pull mode, pull clients are configured to get their desired state configurations from a remote pull service. 
 
-![pull_mode](https://github.com/c3lestin/c3lestin.github.io/blob/master/_img/pull_mode.png)
+![pull_mode](/_img/pull_mode.png)
 
 
