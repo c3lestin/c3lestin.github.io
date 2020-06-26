@@ -8,7 +8,7 @@ layout: feed
 	<link href="https://c3lestin.github.io/blog/atom.xml" rel="self"/>
 	<link href="https://c3lestin.github.io/blog"/>
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
-	<id>https://c3lestin.github.io/blog</id>
+	<id>https://c3lestin.github.ioblog</id>
 	<author>
 		<name>Marckenley Celestin</name>
 		<email>celestin@cybershelter.be</email>
@@ -19,7 +19,7 @@ layout: feed
 			<title>{{ post.title }}</title>
 			<link href="http://c3lestin.github.io{{ post.url }}"/>
 			<updated>{{ post.date | date_to_xmlschema }}</updated>
-			<id>https://c3lestin.github.io/blog{{ post.id }}</id>
+			<id>https://c3lestin.github.io{{ post.id }}</id>
 			<content type="html">{{ post.content | xml_escape }}</content>
 		</entry>
 	{% endfor %}
