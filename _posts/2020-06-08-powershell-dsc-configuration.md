@@ -1,9 +1,15 @@
 ---
 layout: post
-title: "Powershell: DSC Configuration"
-date: 2020-06-08
-tags: [Automation,PowerShell,DSC,Everything]
-share-img: "/img/share-img/2016-11-06-powershell-hashtable-everything-you-wanted-to-know-about.png"
+title: 'Powershell: DSC Configuration'
+date: {}
+tags:
+  - Automation
+  - PowerShell
+  - DSC
+  - Everything
+share-img: >-
+  /img/share-img/2016-11-06-powershell-hashtable-everything-you-wanted-to-know-about.png
+published: true
 ---
 
 Desired State Configuration [(DSC)](https://docs.microsoft.com/en-us/powershell/scripting/dsc/getting-started/wingettingstarted?view=powershell-7) automates administrations and make it less an hassle, it decreases the complexity of scripting in windows and Linux systems and increase the speed of iteration, it is basically configuration as code (Infrastructure As Code). This feature is available beginning the release of powershell version 4.<!--more-->
@@ -39,5 +45,18 @@ Configuration myconfig
 
 {:.box-note}
 **myconfig** is the name of the configuration, **mynode** is the machine the configuration will be applied to, **myrole** is the resource we will configure on the target node.
+
+
+# Key Components of DSC
+Working with DSC will have you familiar with the following terms such as:
+
+- DSC Resources
+- DSC Configurations
+- LCM (Local Configuration Manager)
+- Pull Model
+- Push Model
+
+
+
 
 
