@@ -5,21 +5,21 @@ layout: feed
 <feed xmlns="http://www.w3.org/2005/Atom">
 
 	<title>Kevin Marquette's Blog</title>
-	<link href="https://powershellexplained.comblog/atom.xml" rel="self"/>
-	<link href="https://powershellexplained.comblog"/>
+	<link href="https://blog.cybershelter.beblog/atom.xml" rel="self"/>
+	<link href="https://blog.cybershelter.beblog"/>
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
-	<id>https://powershellexplained.comblog</id>
+	<id>https://blog.cybershelter.beblog</id>
 	<author>
-		<name>Kevin Marquette</name>
-		<email>kevmar@gmail.com</email>
+		<name>Marckenley Celestin</name>
+		<email>celestin@cybershelter.be</email>
 	</author>
 
 	{% for post in site.posts %}
 		<entry>
 			<title>{{ post.title }}</title>
-			<link href="http://kevinmarquette.github.io{{ post.url }}"/>
+			<link href="http://c3lestin.github.io{{ post.url }}"/>
 			<updated>{{ post.date | date_to_xmlschema }}</updated>
-			<id>https://powershellexplained.com{{ post.id }}</id>
+			<id>https://blog.cybershelter.be{{ post.id }}</id>
 			<content type="html">{{ post.content | xml_escape }}</content>
 		</entry>
 	{% endfor %}
