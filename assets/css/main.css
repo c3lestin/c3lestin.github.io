@@ -750,9 +750,9 @@ footer .footer-custom-content {
   font-weight: 800;
   letter-spacing: 1px;
   padding: 0.625rem 0.3125rem;
-  background-color: #FFF;
-  border-radius: 0;
-  color: #404040;
+  background-color: #252525;
+  border-radius: .25rem;
+  color: #9fa0a0;
 }
 @media (min-width: 768px) {
   .pagination .page-item .page-link {
