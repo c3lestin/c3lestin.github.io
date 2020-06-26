@@ -76,4 +76,7 @@ In pull mode, pull clients are configured to get their desired state configurati
 
 ![pull_mode](/_img/pull_mode.png)
 
+## Push Model
+Push mode refers to a user actively applying a configuration to a target node by calling the `Start-DscConfiguration` cmdlet.
 
+![push_mode](/_img/push_mode.png)
