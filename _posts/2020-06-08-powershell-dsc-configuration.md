@@ -93,7 +93,46 @@ Ok, we now know how to import resources from a module into a configuration block
 
 ## DSC Resources
  
-Desired State Configuration Resources provide the building blocks for a DSC configuration. A resource exposes properties that can be configured (schema) and contains the PowerShell script functions that the Local Configuration Manager (LCM) calls to what Microsoft call the "make it so" phase.
+The best way to give you a good understanding of dsc resources is to create a scenario and here is  our scenario, we need to create a dsc configuration named `Enceladus`  the purpose of it will be to make sure the windows service `BITS` status is "stopped" and stays "stopped" on local machine.
+
+Here is what we know about this request so far:
+* Name of the configuration (`Enceladus`)
+* Name of the target Node (`localmachine`)
+
+Here is what we don't know about the request:
+* Name of the module containing the resource to be used (...)
+* Name of the Resource (...)
+
+Windows PowerShell has a built-in function named `Get-DscResource` when executed, retrieves all the PowerShell DSC resources present on the computer.
+
+The following output shows the result when we execute the command on our localmachine.
+
+```
+▶ Get-DscResource
+
+ImplementedAs   Name                      ModuleName                     Version    Properties
+-------------   ----                      ----------                     -------    ---------- 
+                                                                                                                
+PowerShell      PSRepository              PowerShellGet                  2.2.1      {Name, DependsOn, Ensure, InstallationPolicy...}                                                                                                                  
+PowerShell      Archive                   PSDesiredStateConfiguration    1.1        {Destination, Path, Checksum, Credential...}                                                                                                                      
+PowerShell      Environment               PSDesiredStateConfiguration    1.1        {Name, DependsOn, Ensure, Path...}                                                                    
+PowerShell      Group                     PSDesiredStateConfiguration    1.1        {GroupName, Credential, DependsOn, Description...}
+Composite       GroupSet                  PSDesiredStateConfiguration    1.1        {DependsOn, PsDscRunAsCredential, GroupName, En...
+Binary          Log                       PSDesiredStateConfiguration    1.1        {Message, DependsOn, PsDscRunAsCredential}
+PowerShell      Package                   PSDesiredStateConfiguration    1.1        {Name, Path, ProductId, Arguments...}
+Composite       ProcessSet                PSDesiredStateConfiguration    1.1        {DependsOn, PsDscRunAsCredential, Path, Credent...
+PowerShell      Registry                  PSDesiredStateConfiguration    1.1        {Key, ValueName, DependsOn, Ensure...}
+PowerShell      Script                    PSDesiredStateConfiguration    1.1        {GetScript, SetScript, TestScript, Credential...}
+PowerShell      Service                   PSDesiredStateConfiguration    1.1        {Name, BuiltInAccount, Credential, Dependencies...
+Composite       ServiceSet                PSDesiredStateConfiguration    1.1        {DependsOn, PsDscRunAsCredential, Name, Startup...
+PowerShell      User                      PSDesiredStateConfiguration    1.1        {UserName, DependsOn, Description, Disabled...}
+PowerShell      WaitForAll                PSDesiredStateConfiguration    1.1        {NodeName, ResourceName, DependsOn, PsDscRunAsC...
+PowerShell      WindowsPackageCab         PSDesiredStateConfiguration    1.1        {Ensure, Name, SourcePath, DependsOn...}
+PowerShell      WindowsProcess            PSDesiredStateConfiguration    1.1        {Arguments, Path, Credential, DependsOn...}
+PowerShell      Archive                   PSDscResources                 2.12.0.0   {Destination, Path, Checksum, Credential...}
+
+```
+
 
  
 ## LCM
