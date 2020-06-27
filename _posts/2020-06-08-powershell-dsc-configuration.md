@@ -14,7 +14,7 @@ Desired State Configuration [(DSC)](https://docs.microsoft.com/en-us/powershell/
 {:toc}
 
 # Why DSC configuration ?
-When our golden system configuration(s) break or change, most of the time we find ourself asking "God what did change!" we spend countless hours trying to figure out what have changed, this is where PowerShell Desired State Configurations become handy, DSC can `ENSURE` that our system has the correct configurations no matter what by preventing configurations drift. DSC  ensure our system is configured the way it should be.
+When our golden system configuration(s) break or change, most of the time we find ourself asking "God what did change!" we spend countless hours trying to figure out what have changed, this is where PowerShell Desired State Configurations become handy, DSC can `ENSURE` that our system has the correct configurations no matter what by preventing configurations drift. DSC  ensure our system is configured the way it should.
 
 # DSC Structure
 A configuration is nothing more than a special kind of powershell function, the following example shows the anatomy of a simple DSC configuration.
@@ -37,52 +37,18 @@ Configuration myconfig
 [comment]: <> ({:.box-note})
 [comment]: <> (**myconfig** is the name of the configuration, **mynode** is the machine the configuration will be applied to, **myrole** is the resource we will configure on the target node.)
 
-## Configuration block
-Any Desired State Configuration document script starts with the word `Configuration` followed by the `name`  then a `script block` {...},
-the following example shows that `myconfig` acting as the name of the dsc configuration.
-
-``` posh
-Configuration myconfig
-{
-   
-}
-```
-
-the second example shows that `Enceladus` as the name of the configuration.
-
-``` posh
-Configuration Enceladus
-{
-   
-}
-```
-Now we have our first block, what's next?
-Well as you can notice both our configuration block `myconfig` and `Enceladus` are empty, let's import resources to one of our DSC config.
-
-``` posh
-Configuration Enceladus
-{
-   Import-DscResource -Module PSDesiredStateConfiguration
-   
-}
-```
-
-In the upcoming paragraphs we will talk more about DSC resources, here in the above example was just to show you how we can use the `Import-DscResource` cmdlet 
-following a module name containing resources we can use, in that case the `PSDesiredStateConfiguration` module.
+I will explain each block in details.
 
 # Key Components of DSC
 
-You will be familiar with the following terms such as:
+Working with dsc will make you very familiar with the following terms such as:
 
-* `DSC Resources`
 * `DSC Configurations`
+* `DSC Resources`
 * `LCM`
 * `Pull Model`
 * `Push Model`
  
-## DSC Resources
- 
-Desired State Configuration Resources provide the building blocks for a DSC configuration. A resource exposes properties that can be configured `schema` and contains the PowerShell script functions that the Local Configuration Manager `LCM` calls to what Microsoft call the `make it so` phase.
  
 ## DSC Configurations
  
@@ -91,10 +57,48 @@ Desired State Configuration Resources provide the building blocks for a DSC conf
 * The Configuration block.
 * One or more Node blocks.
 * One or more resource blocks.
+
+### The Configuration block
+Any Desired State Configuration document script starts with the word `Configuration` followed by the `name`  then a `script block` {...},
+the following example shows `myconfig` acting as the name of a dsc configuration.
+
+``` posh
+Configuration myconfig
+{
+   
+}
+```
+
+the second example shows `Enceladus` as the name of the configuration.
+
+``` posh
+Configuration Enceladus
+{
+   
+}
+```
+Congratulations! You have your first configuration block, now what's next?
+Well as you can notice, both our configuration block `myconfig` and `Enceladus` are empty, let's change that by  importing resources from a module into the DSC config.
+
+To do that we use the `Import-DscResource` cmdlet following the module name containing the resources we want to use, in that case the `PSDesiredStateConfiguration` module, now you must be wondering, how to know which module contains which resources? Good question, keep reading.
+
+``` posh
+Configuration Enceladus
+{
+   Import-DscResource -Module PSDesiredStateConfiguration
+   
+}
+```
+Ok, we now know how to import resources from a module into a configuration block, great but i want  you to understand more so, let dive into the details of dsc resources.
+
+## DSC Resources
+ 
+Desired State Configuration Resources provide the building blocks for a DSC configuration. A resource exposes properties that can be configured (schema) and contains the PowerShell script functions that the Local Configuration Manager (LCM) calls to what Microsoft call the "make it so" phase.
+
  
 ## LCM
 
-The Local Configuration Manager `LCM` is the engine of Desired State Configuration (DSC). The LCM runs on every target node, and is responsible for parsing and enacting configurations that are sent to the node. It is also responsible for a number of other aspects of DSC, including the following.
+The Local Configuration Manager (LCM) is the engine of Desired State Configuration (DSC). The LCM runs on every target node, and is responsible for parsing and enacting configurations that are sent to the node. It is also responsible for a number of other aspects of DSC, including the following.
 
 * Determining refresh mode (push or pull).
 * Specifying how often a node pulls and enacts configurations.
