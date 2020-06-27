@@ -116,9 +116,7 @@ Output:
 ImplementedAs   Name                      ModuleName                     Version    Properties
 -------------   ----                      ----------                     -------    ---------- 
                                                                                                                 
-PowerShell      PSRepository              PowerShellGet                  2.2.1      {Name, DependsOn, Ensure, InstallationPolicy...}                                                                                                                  
-PowerShell      Archive                   PSDesiredStateConfiguration    1.1        {Destination, Path, Checksum, Credential...}                                                                                                                      
-PowerShell      Package                   PSDesiredStateConfiguration    1.1        {Name, Path, ProductId, Arguments...}
+PowerShell      PSRepository              PowerShellGet                  2.2.1      {Name, DependsOn, Ensure, InstallationPolicy...}                                              PowerShell      Archive                   PSDesiredStateConfiguration    1.1        {Destination, Path, Checksum, Credential...}                                                 PowerShell      Package                   PSDesiredStateConfiguration    1.1        {Name, Path, ProductId, Arguments...}
 Composite       ProcessSet                PSDesiredStateConfiguration    1.1        {DependsOn, PsDscRunAsCredential, Path, Credent...
 PowerShell      Registry                  PSDesiredStateConfiguration    1.1        {Key, ValueName, DependsOn, Ensure...}
 PowerShell      Script                    PSDesiredStateConfiguration    1.1        {GetScript, SetScript, TestScript, Credential...}
@@ -167,7 +165,78 @@ StartupType          [string]             False {Automatic, Disabled, Manual}
 State                [string]             False {Running, Stopped}
 
 ```
-This output will be explained in detail.
+
+Great! we have a promising output, notice that in the name column there is a property called `State` it is not mandatory and it can be only assigned one of those two values "Running" or  "Stopped" they should be a string, in the other hand if you look at the `Name` property in the name column this one is mandatory and only accepts a string.
+
+Whenever you notice the "IsMandatory" set to `True` that is mean in order to use the resource, we need to set the mandatory property into our configuration.
+
+Remember our scenario? Well it seems now we have everything to write our configuration.
+
+We have now the following:
+* Name of the configuration (`Enceladus`)
+* Name of the module containing the resource to be used (`PSDesiredStateConfiguration`)
+* Name of the target Node (`localmachine`)
+* Name of the Resource (`Service`)
+* Name of the Resource properties we need (`Name`, `State`)
+
+Let's write our first DSC Configuration, but before we do, let's briefly dive into the nested blocks.
+
+
+### The Node block
+The `Node` block  is where you target the machine that the configuration will be applied to, it is always nested within the configuration block. 
+You write the node block with the word `Node` following the name of "the machine", then a  `script block` {...} 
+
+```posh
+Configuration Enceladus
+{
+    Import-DscResource -Module PSDesiredStateConfiguration
+    Node $env:COMPUTERNAME
+    {
+ 
+    }
+}
+```
+
+### The Resource name block
+The Resource name block tells the configuration which resource to use from the imported DSC module, it is always nested within the `Node` block, for example in the following scenario we used the  `Service` resource following a descriptive name of "EnceladusBits" this name can be anything you want, then after that a `script block` {...}
+
+```posh
+Configuration Enceladus
+{
+    Import-DscResource -Module PSDesiredStateConfiguration
+    Node $env:COMPUTERNAME
+    {
+        Service EnceladusBits
+        {
+
+        }
+    }
+}
+```
+
+Now let's write our final configuration based on what we have learnt so far for the following scenario which was to create a dsc configuration named `Enceladus`, purpose is to make sure the windows service `BITS` status is "stopped" and stays "stopped" on the local machine.
+
+
+```posh
+Configuration Enceladus
+{
+    Import-DscResource -Module PSDesiredStateConfiguration
+
+    Node $env:COMPUTERNAME
+    {
+        Service EnceladusBits
+        {
+            Name  = "BITS"
+            State = "Stopped"
+        }
+    }
+}
+```
+
+
+You should be pretty confident by now on writing your first dsc configuration. Here is a little challenge for you, use what you've learnt so far to write a dsc configuration that will always set your local machine computer description to: "This is my automation machine."
+
+
  
 ## LCM
 
