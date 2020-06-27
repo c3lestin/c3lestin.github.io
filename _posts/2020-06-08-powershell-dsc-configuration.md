@@ -46,7 +46,7 @@ Working with DSC will have you familiar with the following terms such as:
 
 * `DSC Resources`
 * `DSC Configurations`
-* `LCM (Local Configuration Manager)`
+* `LCM`
 * `Pull Model`
 * `Push Model`
  
@@ -62,7 +62,7 @@ Desired State Configuration Resources provide the building blocks for a DSC conf
 * One or more Node blocks.
 * One or more resource blocks.
  
-## LCM (Local Configuration Manager)
+## LCM
 
 The Local Configuration Manager `LCM` is the engine of Desired State Configuration (DSC). The LCM runs on every target node, and is responsible for parsing and enacting configurations that are sent to the node. It is also responsible for a number of other aspects of DSC, including the following.
 
@@ -71,7 +71,7 @@ The Local Configuration Manager `LCM` is the engine of Desired State Configurati
 * Associating the node with pull service.
 * Specifying partial configurations.
 
-## Pull Server or Pull Model
+## Pull Model
 In pull mode, pull clients are configured to get their desired state configurations from a remote pull service. 
 
 ![pullmode](https://github.com/c3lestin/c3lestin.github.io/raw/master/_img/pull_mode.png)
