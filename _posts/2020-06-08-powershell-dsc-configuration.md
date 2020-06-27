@@ -40,11 +40,20 @@ Configuration myconfig
 **myconfig** is the name of the configuration, **mynode** is the machine the configuration will be applied to, **myrole** is the resource we will configure on the target node.
 
 ## Configuration block
-Any DSC script should start first with the `Configuration` block follow by a `name` parameter then a `script block`,
+Any DSC script should start first with the word `Configuration` followed by a given `name`  then a `script block`{...},
 the following example shows that `myconfig` is the name of the configuration.
 
 ``` posh
 Configuration myconfig
+{
+   
+}
+```
+
+the second example shows that `Enceladus` is the name of the configuration.
+
+``` posh
+Configuration Enceladus
 {
    
 }
