@@ -34,12 +34,12 @@ Configuration myconfig
 }
 ```
 
-{:.box-note}
-**myconfig** is the name of the configuration, **mynode** is the machine the configuration will be applied to, **myrole** is the resource we will configure on the target node.
+[comment]: <> ({:.box-note})
+[comment]: <> (**myconfig** is the name of the configuration, **mynode** is the machine the configuration will be applied to, **myrole** is the resource we will configure on the target node.)
 
 ## Configuration block
-Any DSC script starts first with the word `Configuration` followed by a `name`  then a `script block` {...},
-the following example shows that `myconfig` is the name of the configuration.
+Any Desired State Configuration document script starts with the word `Configuration` followed by the `name`  then a `script block` {...},
+the following example shows that `myconfig` acting as the name of the dsc configuration.
 
 ``` posh
 Configuration myconfig
@@ -48,7 +48,7 @@ Configuration myconfig
 }
 ```
 
-the second example shows that `Enceladus` is the name of the configuration.
+the second example shows that `Enceladus` as the name of the configuration.
 
 ``` posh
 Configuration Enceladus
@@ -72,7 +72,7 @@ following a module name containing resources we can use, in that case the `PSDes
 
 # Key Components of DSC
 
-Working with DSC will have you familiar with the following terms such as:
+You will be familiar with the following terms such as:
 
 * `DSC Resources`
 * `DSC Configurations`
