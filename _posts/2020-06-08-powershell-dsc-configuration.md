@@ -74,9 +74,9 @@ The Local Configuration Manager `LCM` is the engine of Desired State Configurati
 ## Pull Server or Pull Model
 In pull mode, pull clients are configured to get their desired state configurations from a remote pull service. 
 
-![pullmode]({{site.baseurl}}/_img/pull_mode.png)
+![pullmode](../_img/pull_mode.png)
 
 ## Push Model
 Push mode refers to a user actively applying a configuration to a target node by calling the `Start-DscConfiguration` cmdlet.
 
-![pushmode]({{site.baseurl}}/_img/push_mode.png)
+![pushmode](../_img/push_mode.png)
