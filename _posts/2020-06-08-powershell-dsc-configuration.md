@@ -196,6 +196,7 @@ Configuration Enceladus
     }
 }
 ```
+<br>
 
 ### The Resource name block
 The Resource name block tells the configuration which resource to use from the imported DSC module, it is always nested within the `Node` block, for example in the following scenario we used the  `Service` resource following a descriptive name of "EnceladusBits" this name can be anything you want, then after that a `script block` {...}
