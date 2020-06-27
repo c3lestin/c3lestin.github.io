@@ -19,7 +19,7 @@ Let's say you have configured your systems and everything is working fine, you w
 Now let's say you had DSC configuration implemented in your system, in that case the changes that your fellow engineers made on the system while you were on vacation DSC would have take care of them by making sure that the system configuration get reverted to it's original state.
 
 # Structure of a DSC configuration
-A DSC configuration is nothing more than a special kind of powershell function, as you can see below it is pretty straight forward.
+A DSC configuration is nothing more than a special kind of powershell function.
 
 ``` posh
 Configuration myconfig
@@ -38,6 +38,18 @@ Configuration myconfig
 
 {:.box-note}
 **myconfig** is the name of the configuration, **mynode** is the machine the configuration will be applied to, **myrole** is the resource we will configure on the target node.
+
+## Configuration block
+Any DSC script should start first with the `Configuration` block follow by a `name` parameter then a `script block`,
+the following example shows that `myconfig` is the name of the configuration.
+
+``` posh
+Configuration myconfig
+{
+   
+}
+```
+
 
 
 # Key Components of DSC
