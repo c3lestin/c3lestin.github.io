@@ -14,7 +14,7 @@ Desired State Configuration [(DSC)](https://docs.microsoft.com/en-us/powershell/
 {:toc}
 
 # Why DSC configuration ?
-When our golden system configuration(s) break or change, well most of the time we find ourself asking "God what did change!" we spend countless hours trying to figure out what have changed, this is where PowerShell Desired State Configurations become handy, DSC can `ENSURE` that your system has the correct configurations no matter what by preventing configurations drift. DSC  ensure your system is configured the way it should be.
+When our golden system configuration(s) break or change, most of the time we find ourself asking "God what did change!" we spend countless hours trying to figure out what have changed, this is where PowerShell Desired State Configurations become handy, DSC can `ENSURE` that our system has the correct configurations no matter what by preventing configurations drift. DSC  ensure our system is configured the way it should be.
 
 # DSC Structure
 A configuration is nothing more than a special kind of powershell function, the following example shows the anatomy of a simple DSC configuration.
@@ -38,7 +38,7 @@ Configuration myconfig
 **myconfig** is the name of the configuration, **mynode** is the machine the configuration will be applied to, **myrole** is the resource we will configure on the target node.
 
 ## Configuration block
-Any DSC script should start first with the word `Configuration` followed by a given `name`  then a `script block`{...},
+Any DSC script starts first with the word `Configuration` followed by a `name`  then a `script block` {...},
 the following example shows that `myconfig` is the name of the configuration.
 
 ``` posh
@@ -65,6 +65,7 @@ Configuration Enceladus
    Import-DscResource -Module PSDesiredStateConfiguration
    
 }
+```
 
 In the upcoming paragraphs we will talk more about DSC resources, here in the above example was just to show you how we can use the `Import-DscResource` cmdlet 
 following a module name containing resources we can use, in that case the `PSDesiredStateConfiguration` module.
