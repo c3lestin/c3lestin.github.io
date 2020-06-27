@@ -93,23 +93,25 @@ Ok, we now know how to import resources from a module into a configuration block
 
 ## DSC Resources
  
-The best way to give you a good understanding of dsc resources is to create a scenario and here is  our scenario, we need to create a dsc configuration named `Enceladus`  the purpose of it will be to make sure the windows service `BITS` status is "stopped" and stays "stopped" on local machine.
+The best way to give you a good understanding of dsc resources is to create a real world scenario, here is one, create a dsc configuration named `Enceladus` purpose is to make sure the windows service `BITS` status is "stopped" and stays "stopped" on the local machine.
 
 Here is what we know about this request so far:
 * Name of the configuration (`Enceladus`)
 * Name of the target Node (`localmachine`)
 
-Here is what we don't know about the request:
+Here is what we don't know:
 * Name of the module containing the resource to be used (...)
 * Name of the Resource (...)
 
 Windows PowerShell has a built-in function named `Get-DscResource` when executed, retrieves all the PowerShell DSC resources present on the computer.
 
-The following output shows the result when we execute the command on our localmachine.
+``` posh
+Get-DscResource
+```
+
+Output:
 
 ```
-▶ Get-DscResource
-
 ImplementedAs   Name                      ModuleName                     Version    Properties
 -------------   ----                      ----------                     -------    ---------- 
                                                                                                                 
