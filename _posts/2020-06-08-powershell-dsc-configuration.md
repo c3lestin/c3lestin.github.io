@@ -102,6 +102,7 @@ Here is what we know about this request so far:
 Here is what we don't know:
 * Name of the module containing the resource to be used (...)
 * Name of the Resource (...)
+* Name of the Resource properties (...)
 
 Windows PowerShell has a built-in function named `Get-DscResource` when executed, retrieves all the PowerShell DSC resources present on the computer.
 
@@ -117,10 +118,6 @@ ImplementedAs   Name                      ModuleName                     Version
                                                                                                                 
 PowerShell      PSRepository              PowerShellGet                  2.2.1      {Name, DependsOn, Ensure, InstallationPolicy...}                                                                                                                  
 PowerShell      Archive                   PSDesiredStateConfiguration    1.1        {Destination, Path, Checksum, Credential...}                                                                                                                      
-PowerShell      Environment               PSDesiredStateConfiguration    1.1        {Name, DependsOn, Ensure, Path...}                                                                    
-PowerShell      Group                     PSDesiredStateConfiguration    1.1        {GroupName, Credential, DependsOn, Description...}
-Composite       GroupSet                  PSDesiredStateConfiguration    1.1        {DependsOn, PsDscRunAsCredential, GroupName, En...
-Binary          Log                       PSDesiredStateConfiguration    1.1        {Message, DependsOn, PsDscRunAsCredential}
 PowerShell      Package                   PSDesiredStateConfiguration    1.1        {Name, Path, ProductId, Arguments...}
 Composite       ProcessSet                PSDesiredStateConfiguration    1.1        {DependsOn, PsDscRunAsCredential, Path, Credent...
 PowerShell      Registry                  PSDesiredStateConfiguration    1.1        {Key, ValueName, DependsOn, Ensure...}
@@ -135,7 +132,42 @@ PowerShell      Archive                   PSDscResources                 2.12.0.
 
 ```
 
+Now if we look closely to the output, we can quickly notice that the "Name" column has a resource called `Service` and the "ModuleName" column explicitely tell us
+the module name the resource belongs to, in that case it's belong to the `PSDesiredStateConfiguration` module.
 
+```
+ImplementedAs   Name                      ModuleName                     Version    Properties
+-------------   ----                      ----------                     -------    ----------                                                                                                            
+PowerShell      Service                   PSDesiredStateConfiguration    1.1        {Name, BuiltInAccount, Credential, Dependencies...
+```
+
+Now to make sure that we can use the recently discovered `Service` resource for our scenario, let's retrieve all it's properties with the following command:
+
+
+``` posh
+Get-DscResource -Name "Service" -Module "PSDesiredStateConfiguration" | Select-Object -ExpandProperty Properties
+```
+
+Output:
+
+```
+Name                 PropertyType   IsMandatory Values
+----                 ------------   ----------- ------
+Name                 [string]              True {}
+BuiltInAccount       [string]             False {LocalService, LocalSystem, NetworkService}
+Credential           [PSCredential]       False {}
+Dependencies         [string[]]           False {}
+DependsOn            [string[]]           False {}
+Description          [string]             False {}
+DisplayName          [string]             False {}
+Ensure               [string]             False {Absent, Present}
+Path                 [string]             False {}
+PsDscRunAsCredential [PSCredential]       False {}
+StartupType          [string]             False {Automatic, Disabled, Manual}
+State                [string]             False {Running, Stopped}
+
+```
+This output will be explained in detail.
  
 ## LCM
 
