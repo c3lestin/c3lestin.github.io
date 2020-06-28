@@ -264,21 +264,21 @@ I recommend first to solve the challenge, thus will ensure your understanding of
 
 
  
-## LCM
+[comment]: <> (## LCM)
 
-The Local Configuration Manager **(LCM)** is the engine of Desired State Configuration (DSC). The LCM runs on every target node, and is responsible for parsing and enacting configurations that are sent to the node. It is also responsible for a number of other aspects of DSC, including the following.
+[comment]: <> (The Local Configuration Manager **(LCM)** is the engine of Desired State Configuration (DSC). The LCM runs on every target node, and is responsible for parsing and enacting configurations that are sent to the node. It is also responsible for a number of other aspects of DSC, including the following.)
 
-* Determining refresh mode (push or pull).
-* Specifying how often a node pulls and enacts configurations.
-* Associating the node with pull service.
-* Specifying partial configurations.
+[comment]: <> (* Determining refresh mode (push or pull).)
+[comment]: <> (* Specifying how often a node pulls and enacts configurations.)
+[comment]: <> (* Associating the node with pull service.)
+[comment]: <> (* Specifying partial configurations.)
 
-## Pull Model
-In pull mode, pull clients are configured to get their desired state configurations from a remote pull service. 
+[comment]: <> (## Pull Model)
+[comment]: <> (In pull mode, pull clients are configured to get their desired state configurations from a remote pull service.) 
 
-![pullmode](https://github.com/c3lestin/c3lestin.github.io/raw/master/_img/pull_mode.png)
+[comment]: <> (![pullmode](https://github.com/c3lestin/c3lestin.github.io/raw/master/_img/pull_mode.png))
 
-## Push Model
-Push mode refers to a user actively applying a configuration to a target node by calling the `Start-DscConfiguration` cmdlet.
+[comment]: <> (## Push Model)
+[comment]: <> (Push mode refers to a user actively applying a configuration to a target node by calling the `Start-DscConfiguration` cmdlet.)
 
-![pushmode](https://github.com/c3lestin/c3lestin.github.io/raw/master/_img/push_mode.png)
+[comment]: <> (![pushmode](https://github.com/c3lestin/c3lestin.github.io/raw/master/_img/push_mode.png))
