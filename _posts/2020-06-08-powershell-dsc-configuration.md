@@ -96,13 +96,13 @@ Ok, we now know how to import resources from a module into a configuration block
 The best way to give you a good understanding of dsc resources is to create a real world scenario, here is one, create a dsc configuration named **Enceladus** purpose is to make sure the windows service `BITS` status is **stopped** and stays **stopped** on the local machine.
 
 Here is what we know about this request so far:
-* Name of the configuration (**Enceladus**)
-* Name of the target Node (**localmachine**)
+* [x] Name of the configuration (**Enceladus**)
+* [x] Name of the target Node (**localmachine**)
 
 Here is what we don't know:
-* Name of the module containing the resource to be used (...)
-* Name of the Resource (...)
-* Name of the Resource properties (...)
+* [ ] Name of the module containing the resource to be used (...)
+* [ ] Name of the Resource (...)
+* [ ] Name of the Resource properties (...)
 
 Windows PowerShell has a built-in function named `Get-DscResource` when executed, retrieves all the PowerShell DSC resources present on the computer.
 
@@ -215,11 +215,11 @@ Now let's write our final configuration based on what we have learnt so far for 
 
 Here is everything we gathered and know:
 
-* Name of the configuration (**Enceladus**)
-* Name of the module containing the resource to be used (**PSDesiredStateConfiguration**)
-* Name of the target Node (**localmachine**)
-* Name of the Resource (**Service**)
-* Name of the Resource properties we need (**Name**, **State**)
+* [x] Name of the configuration (**Enceladus**)
+* [x] Name of the module containing the resource to be used (**PSDesiredStateConfiguration**)
+* [x] Name of the target Node (**localmachine**)
+* [x] Name of the Resource (**Service**)
+* [x] Name of the Resource properties we need (**Name**, **State**)
 
 
 ```posh
@@ -244,12 +244,12 @@ You should be pretty confident by now on writing your first dsc configuration, n
 **Challenge: C01** Write a dsc configuration named `Europa` that will always set your local machine computer description to: **This is my automation machine.**, when found the resource name you'll use to execute the task give it a descriptive name of **EuropaDescription**.
 
 
-* Name of the configuration (**Europa**)
-* Name of the module containing the resource to be used (**...**)
-* Name of the target Node (**localmachine**)
-* Name of the Resource (**...**)
-* Name of the Resource description (**EuropaDescription**)
-* Name of the Resource properties we need (**...**)
+* [x] Name of the configuration (**Europa**)
+* [ ] Name of the module containing the resource to be used (**...**)
+* [x] Name of the target Node (**localmachine**)
+* [ ] Name of the Resource (**...**)
+* [x] Name of the Resource description (**EuropaDescription**)
+* [ ] Name of the Resource properties we need (**...**)
 
 
 You are so far learning the basics and we will keep doing so until part 3 of this article, it is really important that you know how everything works before diving into some more advanced DSC concepts. I recommend first to solve the challenge before revealing it, thus will ensure you understand what we have discussed so far.
