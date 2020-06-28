@@ -255,7 +255,7 @@ You should be pretty confident by now on writing your first dsc configuration, n
 You are so far learning the basics and we will keep doing so until part 3 of this article, it is really important that you know how everything works before diving into some more advanced DSC concepts. I recommend first to solve the challenge before revealing it, thus will ensure you understand what we have discussed so far.
 
 {:.box-note}
-**Result:** [(*reveal C01*)]("https://raw.githubusercontent.com/c3lestin/c3lestin.github.io/master/_challenge/c01.md")
+**Result:** [(*reveal C01*)]("challenge?utm_source=blog&utm_medium=blog&utm_content=recent#c01")
 
 
 
