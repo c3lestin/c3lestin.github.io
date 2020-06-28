@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  Cybershelter
-subtitle: Automation, Security, Artificial Intelligence, Science etc.. feel free to dive in.
+subtitle: It's all about IT Security, Automation, Artificial Intelligence, Science, life etc.. feel free to dive in.
 ---
 
 
