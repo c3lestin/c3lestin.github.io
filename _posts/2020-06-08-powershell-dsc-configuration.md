@@ -89,7 +89,7 @@ Configuration Enceladus
    
 }
 ```
-Ok, we now know how to import resources from a module into a configuration block, great but i want  you to understand more so, let dive into the details of dsc resources.
+Ok, we now know how to import resources from a module into a configuration block, great but i want  you to understand more so, let's dive into the details of dsc resources.
 
 #### DSC Resources
  
@@ -111,20 +111,18 @@ Get-DscResource
 ```
 
 Output:
+*certain values were omitted for the sake of displaying not too much data, yours might look slightly different.*
 
 ```
 ImplementedAs   Name                      ModuleName                     Version    Properties
 -------------   ----                      ----------                     -------    ---------- 
                                                                                                                 
-PowerShell      PSRepository              PowerShellGet                  2.2.1      {Name, DependsOn, Ensure, InstallationPolicy...}                                              PowerShell      Archive                   PSDesiredStateConfiguration    1.1        {Destination, Path, Checksum, Credential...}                                                 PowerShell      Package                   PSDesiredStateConfiguration    1.1        {Name, Path, ProductId, Arguments...}
-Composite       ProcessSet                PSDesiredStateConfiguration    1.1        {DependsOn, PsDscRunAsCredential, Path, Credent...
+PowerShell      PSRepository              PowerShellGet                  2.2.1      {Name, DependsOn, Ensure, InstallationPolicy...}                                              PowerShell      Archive                   PSDesiredStateConfiguration    1.1        {Destination, Path, Checksum, Credential...}                                                 
 PowerShell      Registry                  PSDesiredStateConfiguration    1.1        {Key, ValueName, DependsOn, Ensure...}
 PowerShell      Script                    PSDesiredStateConfiguration    1.1        {GetScript, SetScript, TestScript, Credential...}
 PowerShell      Service                   PSDesiredStateConfiguration    1.1        {Name, BuiltInAccount, Credential, Dependencies...
 Composite       ServiceSet                PSDesiredStateConfiguration    1.1        {DependsOn, PsDscRunAsCredential, Name, Startup...
 PowerShell      User                      PSDesiredStateConfiguration    1.1        {UserName, DependsOn, Description, Disabled...}
-PowerShell      WaitForAll                PSDesiredStateConfiguration    1.1        {NodeName, ResourceName, DependsOn, PsDscRunAsC...
-PowerShell      WindowsPackageCab         PSDesiredStateConfiguration    1.1        {Ensure, Name, SourcePath, DependsOn...}
 PowerShell      WindowsProcess            PSDesiredStateConfiguration    1.1        {Arguments, Path, Credential, DependsOn...}
 PowerShell      Archive                   PSDscResources                 2.12.0.0   {Destination, Path, Checksum, Credential...}
 
@@ -176,16 +174,8 @@ Great! we have a promising output, notice that in the *Name* column there is a p
 
 Whenever you notice the *IsMandatory* set to `True` that is mean in order to use the resource, we need to set the mandatory property into our configuration.
 
-Remember our scenario? Well it seems now we have everything to write our configuration.
 
-We have now the following:
-* Name of the configuration (**Enceladus**)
-* Name of the module containing the resource to be used (**PSDesiredStateConfiguration**)
-* Name of the target Node (**localmachine**)
-* Name of the Resource (**Service**)
-* Name of the Resource properties we need (**Name**, **State**)
-
-Let's write our first DSC Configuration, but before we do, let's briefly dive into the nested blocks.
+Understand the nested blocks (the **node** block and the **resource** block)
 
 
 ### The Node block
@@ -204,8 +194,8 @@ Configuration Enceladus
 ```
 <br>
 
-### The Resource name block
-The **Resource name block** tells the configuration which resource to use from the **imported DSC module**, it is always nested within the `Node` block, for example in the following scenario we used the  `Service` resource in the `PSDesiredStateConfiguration ` module then we give it a descriptive name of **EnceladusBits** this name can be anything you want, then right after that a **script block** `{...}`
+### The Resource block
+This block starts first wirh the **name** of the resource, it tells the configuration which one to use from the **imported DSC module**, it is always nested within the `Node` block, for example in the following scenario we used the  `Service` resource, service is it's name and it is a resource in the `PSDesiredStateConfiguration ` module then we give it a descriptive name of **EnceladusBits** this name can be anything you want, then right after that a **script block** `{...}`
 
 ```posh
 Configuration Enceladus
@@ -222,6 +212,14 @@ Configuration Enceladus
 ```
 
 Now let's write our final configuration based on what we have learnt so far for the following scenario which was to create a dsc configuration named **Enceladus**, purpose was to make sure the windows service `BITS` status was **stopped** and stays **stopped** on the local machine.
+
+Here is everything we gathered and know:
+
+* Name of the configuration (**Enceladus**)
+* Name of the module containing the resource to be used (**PSDesiredStateConfiguration**)
+* Name of the target Node (**localmachine**)
+* Name of the Resource (**Service**)
+* Name of the Resource properties we need (**Name**, **State**)
 
 
 ```posh
@@ -252,6 +250,8 @@ You should be pretty confident by now on writing your first dsc configuration, n
 * Name of the target Node (`localmachine`)
 * Name of the Resource (...)
 * Name of the Resource properties we need (...)
+
+
 
  
 ## LCM
