@@ -241,15 +241,25 @@ Configuration Enceladus
 
 You should be pretty confident by now on writing your first dsc configuration, now test what you have learn.
 
+{:.box-warning}
+**Challenge:01** Write a dsc configuration named `Europa` that will always set your local machine computer description to: **This is my automation machine.**, when found the resource name you'll use to execute the task give it a descriptive name of **EuropaDescription**.
+
+
+* Name of the configuration (**Europa**)
+* Name of the module containing the resource to be used (**...**)
+* Name of the target Node (**localmachine**)
+* Name of the Resource (**...**)
+* Name of the Resource description (**EuropaDescription*)
+* Name of the Resource properties we need (**...**)
+
+
+You are so far learning the basics and we will keep doing so until part 3 of this article, it is really important that you know how everything works before diving into some more advanced DSC concepts.
+
+I recommend first to solve the challenge, thus will ensure your understanding of what we have discussed so far and then keep reading.
+
 {:.box-note}
-**Challenge:** Write a dsc configuration named `Europa` that will always set your local machine computer description to: **This is my automation machine.** 
+**Challenge result:** Click  **Chanllenge:01** 
 
-
-* Name of the configuration (`Europa`)
-* Name of the module containing the resource to be used (...)
-* Name of the target Node (`localmachine`)
-* Name of the Resource (...)
-* Name of the Resource properties we need (...)
 
 
 
