@@ -11,4 +11,4 @@ Microsoft Windows PowerShell is an object-oriented scripting language that can b
 
 # Recent Articles
 Find all of the fresh goodies here.
-{% include posh_recent-posts.md %}* [More](sitemap/?utm_source=blog&utm_medium=blog&utm_content=recent)
+{% include posh_recent_posts.md %}* [More](sitemap/?utm_source=blog&utm_medium=blog&utm_content=recent)
