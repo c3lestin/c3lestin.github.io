@@ -14,10 +14,10 @@ Desired State Configuration [(DSC)](https://docs.microsoft.com/en-us/powershell/
 {:toc}
 
 # Why DSC configuration ?
-When our golden system configuration(s) break or change, most of the time we find ourself asking "God what did change!" we spend countless hours trying to figure out what have changed, this is where PowerShell Desired State Configurations become handy, DSC can `ENSURE` that our system has the correct configurations no matter what by preventing configurations drift. DSC  ensure our system is configured the way it should.
+When our golden system configuration(s) break or change, most of the time we find ourself asking "What did change?" we spend countless hours trying to figure out what have changed, this is where PowerShell Desired State Configurations become handy, DSC can `ENSURE` that our system has the correct configurations no matter what by preventing configurations drift.
 
 # DSC Structure
-A configuration is nothing more than a special kind of powershell function, the following example shows the anatomy of a simple DSC configuration.
+A configuration is nothing more than a special kind of powershell function, the following example shows the anatomy of a basic DSC configuration.
 
 ``` posh
 Configuration myconfig
@@ -37,11 +37,11 @@ Configuration myconfig
 [comment]: <> ({:.box-note})
 [comment]: <> (**myconfig** is the name of the configuration, **mynode** is the machine the configuration will be applied to, **myrole** is the resource we will configure on the target node.)
 
-I will explain each block in details.
+Explanation of each block in details.
 
 # Key Components of DSC
 
-Working with dsc will make you very familiar with the following terms such as:
+When working with dsc you will become very familiar with the following terms such as:
 
 * `DSC Configurations`
 * `DSC Resources`
@@ -91,7 +91,7 @@ Configuration Enceladus
 ```
 Ok, we now know how to import resources from a module into a configuration block, great but i want  you to understand more so, let dive into the details of dsc resources.
 
-## DSC Resources
+#### DSC Resources
  
 The best way to give you a good understanding of dsc resources is to create a real world scenario, here is one, create a dsc configuration named `Enceladus` purpose is to make sure the windows service `BITS` status is "stopped" and stays "stopped" on the local machine.
 
@@ -146,6 +146,12 @@ Now to make sure that we can use the recently discovered `Service` resource for 
 Get-DscResource -Name "Service" -Module "PSDesiredStateConfiguration" | Select-Object -ExpandProperty Properties
 ```
 
+or 
+
+``` posh
+(Get-DscResource -Name "Service" -Module "PSDesiredStateConfiguration").Properties
+```
+
 Output:
 
 ```
@@ -166,7 +172,7 @@ State                [string]             False {Running, Stopped}
 
 ```
 
-Great! we have a promising output, notice that in the name column there is a property called `State` it is not mandatory and it can be only assigned one of those two values "Running" or  "Stopped" they should be a string, in the other hand if you look at the `Name` property in the name column this one is mandatory and only accepts a string.
+Great! we have a promising output, notice that in the "Name" column there is a property called `State` it is NotMandatory and it can only be assigned one of those two values {*Running or Stopped*} their "PropertyType" should be a string, in the other hand if you look at the `Name` property in the name column this one "IsMandatory" and only accepts a string as "PropertyType".
 
 Whenever you notice the "IsMandatory" set to `True` that is mean in order to use the resource, we need to set the mandatory property into our configuration.
 
@@ -215,7 +221,7 @@ Configuration Enceladus
 }
 ```
 
-Now let's write our final configuration based on what we have learnt so far for the following scenario which was to create a dsc configuration named `Enceladus`, purpose is to make sure the windows service `BITS` status is "stopped" and stays "stopped" on the local machine.
+Now let's write our final configuration based on what we have learnt so far for the following scenario which was to create a dsc configuration named `Enceladus`, purpose was to make sure the windows service `BITS` status was "stopped" and stays "stopped" on the local machine.
 
 
 ```posh
@@ -235,8 +241,17 @@ Configuration Enceladus
 ```
 
 
-You should be pretty confident by now on writing your first dsc configuration. Here is a little challenge for you, use what you've learnt so far to write a dsc configuration that will always set your local machine computer description to: "This is my automation machine."
+You should be pretty confident by now on writing your first dsc configuration, now test what you have learn.
 
+{:.box-note}
+**Challenge:** Write a dsc configuration named `Europa` that will always set your local machine computer description to: **This is my automation machine.** 
+
+
+* Name of the configuration (`Europa`)
+* Name of the module containing the resource to be used (...)
+* Name of the target Node (`localmachine`)
+* Name of the Resource (...)
+* Name of the Resource properties we need (...)
 
  
 ## LCM
