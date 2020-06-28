@@ -8,12 +8,12 @@
 
 You are viewing the result for challenge C01.
 
-### Challenge
+#### Challenge
 
 {:.box-warning}
 **Challenge: C01** Write a dsc configuration named `Europa` that will always set your local machine computer description to: **This is my automation machine.**, when found the resource name you'll use to execute the task give it a descriptive name of **EuropaDescription**.
 
-### Details
+#### Details
 * Name of the configuration (**Europa**)
 * Name of the module containing the resource to be used (**ComputerManagementDsc**)
 * Name of the target Node (**$env:COMPUTERNAME**)
@@ -21,8 +21,8 @@ You are viewing the result for challenge C01.
 * Name of the Resource description (**EuropaDescription**)
 * Name of the Resource properties we need (**Name, Description**)
 
-### Configuration
-
+#### Configuration
+<br>
 ```posh
 Configuration Europa
 {
