@@ -17,7 +17,7 @@ You are viewing the result for challenge C01.
 * Name of the module containing the resource to be used (**ComputerManagementDsc**)
 * Name of the target Node (**$env:COMPUTERNAME**)
 * Name of the Resource (**Computer**)
-* Name of the Resource description (**EuropaDescription*)
+* Name of the Resource description (**EuropaDescription**)
 * Name of the Resource properties we need (**Name, Description**)
 
 ### Configuration
