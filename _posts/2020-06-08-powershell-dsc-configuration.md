@@ -257,6 +257,9 @@ You are so far learning the basics and we will keep doing so until part 3 of thi
 {:.box-note}
 **Result:** [(*reveal C01*)](?utm_source=blog&utm_medium=blog&utm_content=recent#dsc-resources)
 
+{:.box-note}
+**Result:** [(*reveal C01*)](/challenge/?utm_source=blog&utm_medium=blog&utm_content=recent=c01)
+
 
 
 
