@@ -21,7 +21,8 @@ You are viewing the result for challenge C01.
 * Name of the Resource properties we need (**Name, Description**)
 
 ### Configuration
-````posh
+
+```posh
 Configuration Europa
 {
     Import-DscResource -Module ComputerManagementDsc
@@ -29,12 +30,11 @@ Configuration Europa
     {
         Computer EuropaDescription
         {
-            Name = "$env:COMPUTERNAME"
+            Name        = "$env:COMPUTERNAME"
             Description = "This is my automation machine."
         }
     }
 }
+
 ```
-
-Note: Applying this DSC Config might reboot your machine. 
-
+**Note**: Applying this DSC Config might reboot your machine.
