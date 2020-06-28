@@ -1,6 +1,8 @@
 ---
 layout: page
-title:  View our challenges
-subtitle: share your success with me
+title:  challenges and results
+subtitle: share your success or failure either way you will learn
 ---
-{% include challenges.md %}* [More](sitemap/?utm_source=blog&utm_medium=blog&utm_content=recent)
+{% include challenges.md %}*
+
+
