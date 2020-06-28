@@ -259,9 +259,9 @@ You are so far learning the basics and we will keep doing so until part 3 of thi
 **Result:** [(*reveal C01*)](/challenge/?utm_source=blog&utm_medium=blog&utm_content=recent#c01)
 
 
-# You wrote your DSC config, now what ?
+# DSC Confuguration phases
 
-Now let's talk about the pases that your configuration will go  through, this is very important to understand. 
+Let's talk about the phases your configuration named `Europa` will go through, this is very important to understand. So grab a cup of coffee or tea and let's dive in.
 
 
 
