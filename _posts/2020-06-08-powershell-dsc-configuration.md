@@ -14,7 +14,7 @@ Desired State Configuration [(DSC)](https://docs.microsoft.com/en-us/powershell/
 {:toc}
 
 # Why DSC configuration ?
-When our golden system configuration(s) break or change, most of the time we find ourself asking "What did change?" we spend countless hours trying to figure out what have changed, this is where PowerShell Desired State Configurations become handy, DSC can `ENSURE` that our system has the correct configurations no matter what by preventing configurations drift.
+When our golden system configuration(s) break or change, most of the time we find ourself asking "**What did change?**" we spend countless hours trying to figure out what have changed, this is where PowerShell Desired State Configurations become handy, DSC can `ENSURE` that our system has the correct configurations no matter what by preventing configurations drift.
 
 # DSC Structure
 A configuration is nothing more than a special kind of powershell function, the following example shows the anatomy of a basic DSC configuration.
@@ -43,11 +43,11 @@ Explanation of each block in details.
 
 When working with dsc you will become very familiar with the following terms such as:
 
-* `DSC Configurations`
-* `DSC Resources`
-* `LCM`
-* `Pull Model`
-* `Push Model`
+* **DSC Configurations**
+* **DSC Resources**
+* **LCM**
+* **Pull Model**
+* **Push Model**
  
  
 ## DSC Configurations
@@ -59,8 +59,8 @@ When working with dsc you will become very familiar with the following terms suc
 * One or more resource blocks.
 
 ### The Configuration block
-Any Desired State Configuration document script starts with the word `Configuration` followed by the `name`  then a `script block` {...},
-the following example shows `myconfig` acting as the name of a dsc configuration.
+Any Desired State Configuration document script starts with the word `Configuration` followed by the `name`  then a **script block** `{...}`,
+the following example shows **myconfig** acting as the name of a dsc configuration.
 
 ``` posh
 Configuration myconfig
@@ -69,7 +69,7 @@ Configuration myconfig
 }
 ```
 
-the second example shows `Enceladus` as the name of the configuration.
+the second example shows **Enceladus** as the name of the configuration.
 
 ``` posh
 Configuration Enceladus
@@ -78,7 +78,7 @@ Configuration Enceladus
 }
 ```
 Congratulations! You have your first configuration block, now what's next?
-Well as you can notice, both our configuration block `myconfig` and `Enceladus` are empty, let's change that by  importing resources from a module into the DSC config.
+Well as you can notice, both our configuration block **myconfig** and **Enceladus** are empty, let's change that by  importing resources from a module into the DSC config.
 
 To do that we use the `Import-DscResource` cmdlet following the module name containing the resources we want to use, in that case the `PSDesiredStateConfiguration` module, now you must be wondering, how to know which module contains which resources? Good question, keep reading.
 
@@ -93,11 +93,11 @@ Ok, we now know how to import resources from a module into a configuration block
 
 #### DSC Resources
  
-The best way to give you a good understanding of dsc resources is to create a real world scenario, here is one, create a dsc configuration named `Enceladus` purpose is to make sure the windows service `BITS` status is "stopped" and stays "stopped" on the local machine.
+The best way to give you a good understanding of dsc resources is to create a real world scenario, here is one, create a dsc configuration named **Enceladus** purpose is to make sure the windows service `BITS` status is **stopped** and stays **stopped** on the local machine.
 
 Here is what we know about this request so far:
-* Name of the configuration (`Enceladus`)
-* Name of the target Node (`localmachine`)
+* Name of the configuration (**Enceladus**)
+* Name of the target Node (**localmachine**)
 
 Here is what we don't know:
 * Name of the module containing the resource to be used (...)
@@ -130,7 +130,7 @@ PowerShell      Archive                   PSDscResources                 2.12.0.
 
 ```
 
-Now if we look closely to the output, we can quickly notice that the "Name" column has a resource called `Service` and the "ModuleName" column explicitely tell us
+Now if we look closely to the output, we can quickly notice that the *Name* column has a resource called `Service` and the *ModuleName* column explicitely tell us
 the module name the resource belongs to, in that case it's belong to the `PSDesiredStateConfiguration` module.
 
 ```
@@ -146,7 +146,7 @@ Now to make sure that we can use the recently discovered `Service` resource for 
 Get-DscResource -Name "Service" -Module "PSDesiredStateConfiguration" | Select-Object -ExpandProperty Properties
 ```
 
-or 
+**or** 
 
 ``` posh
 (Get-DscResource -Name "Service" -Module "PSDesiredStateConfiguration").Properties
@@ -172,25 +172,25 @@ State                [string]             False {Running, Stopped}
 
 ```
 
-Great! we have a promising output, notice that in the "Name" column there is a property called `State` it is NotMandatory and it can only be assigned one of those two values {*Running or Stopped*} their "PropertyType" should be a string, in the other hand if you look at the `Name` property in the name column this one "IsMandatory" and only accepts a string as "PropertyType".
+Great! we have a promising output, notice that in the *Name* column there is a property called `State` it is **NotMandatory** and it can only be assigned one of those two values {**Running** or **Stopped**} their *PropertyType* should be a string, in the other hand if you look at the `Name` property in the *Name column* this one *IsMandatory* and only accepts a string as *PropertyType*.
 
-Whenever you notice the "IsMandatory" set to `True` that is mean in order to use the resource, we need to set the mandatory property into our configuration.
+Whenever you notice the *IsMandatory* set to `True` that is mean in order to use the resource, we need to set the mandatory property into our configuration.
 
 Remember our scenario? Well it seems now we have everything to write our configuration.
 
 We have now the following:
-* Name of the configuration (`Enceladus`)
-* Name of the module containing the resource to be used (`PSDesiredStateConfiguration`)
-* Name of the target Node (`localmachine`)
-* Name of the Resource (`Service`)
-* Name of the Resource properties we need (`Name`, `State`)
+* Name of the configuration (**Enceladus**)
+* Name of the module containing the resource to be used (**PSDesiredStateConfiguration**)
+* Name of the target Node (**localmachine**)
+* Name of the Resource (**Service**)
+* Name of the Resource properties we need (**Name**, **State**)
 
 Let's write our first DSC Configuration, but before we do, let's briefly dive into the nested blocks.
 
 
 ### The Node block
 The `Node` block  is where you target the machine that the configuration will be applied to, it is always nested within the configuration block. 
-You write the node block with the word `Node` following the name of "the machine", then a  `script block` {...} 
+You write the node block with the word `Node` following the name of **the machine** , then a  **script block** `{...}` 
 
 ```posh
 Configuration Enceladus
@@ -205,7 +205,7 @@ Configuration Enceladus
 <br>
 
 ### The Resource name block
-The Resource name block tells the configuration which resource to use from the imported DSC module, it is always nested within the `Node` block, for example in the following scenario we used the  `Service` resource following a descriptive name of "EnceladusBits" this name can be anything you want, then after that a `script block` {...}
+The **Resource name block** tells the configuration which resource to use from the **imported DSC module**, it is always nested within the `Node` block, for example in the following scenario we used the  `Service` resource in the `PSDesiredStateConfiguration ` module then we give it a descriptive name of **EnceladusBits** this name can be anything you want, then right after that a **script block** `{...}`
 
 ```posh
 Configuration Enceladus
@@ -221,7 +221,7 @@ Configuration Enceladus
 }
 ```
 
-Now let's write our final configuration based on what we have learnt so far for the following scenario which was to create a dsc configuration named `Enceladus`, purpose was to make sure the windows service `BITS` status was "stopped" and stays "stopped" on the local machine.
+Now let's write our final configuration based on what we have learnt so far for the following scenario which was to create a dsc configuration named **Enceladus**, purpose was to make sure the windows service `BITS` status was **stopped** and stays **stopped** on the local machine.
 
 
 ```posh
@@ -256,7 +256,7 @@ You should be pretty confident by now on writing your first dsc configuration, n
  
 ## LCM
 
-The Local Configuration Manager (LCM) is the engine of Desired State Configuration (DSC). The LCM runs on every target node, and is responsible for parsing and enacting configurations that are sent to the node. It is also responsible for a number of other aspects of DSC, including the following.
+The Local Configuration Manager **(LCM)** is the engine of Desired State Configuration (DSC). The LCM runs on every target node, and is responsible for parsing and enacting configurations that are sent to the node. It is also responsible for a number of other aspects of DSC, including the following.
 
 * Determining refresh mode (push or pull).
 * Specifying how often a node pulls and enacts configurations.
