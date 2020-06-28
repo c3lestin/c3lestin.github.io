@@ -20,9 +20,9 @@ You are viewing the result for challenge C01.
 * Name of the Resource (**Computer**)
 * Name of the Resource description (**EuropaDescription**)
 * Name of the Resource properties we need (**Name, Description**)
+<br>
 
 #### Configuration
-
 The configuration code
 
 ```posh
