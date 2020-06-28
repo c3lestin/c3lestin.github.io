@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Powershell: DSC Configuration Part I"
+title: "Powershell: DSC Configuration (Part I)"
 date: 2020-06-08
 tags: [Automation,PowerShell,DSC,Everything]
 share-img: "/img/share-img/2016-11-06-powershell-hashtable-everything-you-wanted-to-know-about.png"
