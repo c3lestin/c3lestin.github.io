@@ -16,12 +16,12 @@ You are viewing the result for challenge C01
 <br>
 
 #### Details
-* [x] Name of the configuration (**Europa**)
-* [x] Name of the module containing the resource to be used (**ComputerManagementDsc**)
-* [x] Name of the target Node (**$env:COMPUTERNAME**)
-* [x] Name of the Resource (**Computer**)
-* [x] Name of the Resource description (**EuropaDescription**)
-* [x] Name of the Resource properties we need (**Name, Description**)
+[x] Name of the configuration (**Europa**)
+[x] Name of the module containing the resource to be used (**ComputerManagementDsc**)
+[x] Name of the target Node (**$env:COMPUTERNAME**)
+[x] Name of the Resource (**Computer**)
+[x] Name of the Resource description (**EuropaDescription**)
+[x] Name of the Resource properties we need (**Name, Description**)
 
 <br>
 
