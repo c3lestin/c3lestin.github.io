@@ -261,9 +261,6 @@ I recommend first to solve the challenge, thus will ensure your understanding of
 **Challenge:01 Result:** Click to reveal me **Chanllenge:01** 
 
 
-{:.box-success}
-**success:** Great you won!
-
 
 
 
