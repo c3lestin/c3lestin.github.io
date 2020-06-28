@@ -23,7 +23,7 @@ You are viewing the result for challenge C01.
 
 #### Configuration
 
-<br>
+The configuration code
 
 ```posh
 Configuration Europa
