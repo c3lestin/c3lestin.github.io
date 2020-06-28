@@ -8,6 +8,10 @@ subtitle: It's all about IT Security, Automation, Artificial Intelligence, Scien
 I am a Workplace Engineer for Synergics focus on automation and security. I love learning and love sharing knowledge, I do it for fun, been passionate about artificial intelligence and IT security for a very long time now. I learn new things every day, i build this blog, it's  primary goal is to share my discoveries.  
 
 
+# Recent Articles
+Here is the most recent articles regarding each area that i have been posting to the blog.
+{% include posh_recent_posts.md %}* [More](sitemap/?utm_source=blog&utm_medium=blog&utm_content=recent)
+
 
 [comment]: <> (# Language Specific Automation)
 
