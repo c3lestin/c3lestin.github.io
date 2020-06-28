@@ -24,7 +24,7 @@ author: Celestin
 navbar-links:
   About Me: "aboutme/?utm_source=blog&utm_medium=blog&utm_content=navbar"
   Automation:
-    - PowerShell: "posh?utm_source=blog&utm_medium=blog&utm_content=navbar"
+    - PowerShell: "posh/?utm_source=blog&utm_medium=blog&utm_content=navbar"
     - Python: "underconstruction/?utm_source=blog&utm_medium=blog&utm_content=navbar"
   Security:
     - Pentesting: "underconstruction/?utm_source=blog&utm_medium=blog&utm_content=navbar"
