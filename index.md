@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  Cybershelter blog
+title:  Cybershelter
 subtitle: It's all about IT Security, Automation, Artificial Intelligence, Science, life etc.. feel free to dive in.
 ---
 
