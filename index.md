@@ -10,7 +10,7 @@ I am a Workplace Engineer for Synergics focus on automation and security. I love
 
 # Recent Articles
 Here is the most recent articles regarding each area that i have been posting to the blog.
-{% include recent_posts.md %}* [More](sitemap/?utm_source=blog&utm_medium=blog&utm_content=recent)
+{% include recent-posts.md %}* [More](sitemap/?utm_source=blog&utm_medium=blog&utm_content=recent)
 
 
 [comment]: <> (# Language Specific Automation)
