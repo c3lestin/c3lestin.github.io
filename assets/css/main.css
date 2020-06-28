@@ -873,12 +873,12 @@ pre code {
 }
 
 .box-note {
-  background-color: #1d1d1d;
+  background-color: rgba(0, 0, 0, .8);
   border-left-color: #28a745;
 }
 
 .box-warning {
-  background-color: #fdf5d4;
+  background-color: rgba(0, 0, 0, .8);
   border-left-color: #f1c40f;
 }
 
