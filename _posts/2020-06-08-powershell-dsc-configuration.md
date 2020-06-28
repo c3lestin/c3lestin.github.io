@@ -226,7 +226,6 @@ Here is everything we gathered and know:
 Configuration Enceladus
 {
     Import-DscResource -Module PSDesiredStateConfiguration
-
     Node $env:COMPUTERNAME
     {
         Service EnceladusBits
