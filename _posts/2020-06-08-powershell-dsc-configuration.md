@@ -22,7 +22,7 @@ A configuration is nothing more than a special kind of powershell function, the 
 ``` posh
 Configuration myconfig
 {
-   Import-DscResource -Module PSDesiredStateConfiguration
+   Import-DscResource -Module ModuleName
    Node mynode
    {
       WindowsFeature myrole
@@ -54,13 +54,13 @@ When working with dsc you will become very familiar with the following terms suc
  
  Configurations are codes that define what the resources should do, they consists of the following parts:
 
-* The Configuration block.
+* One Configuration block.
 * One or more Node blocks.
 * One or more resource blocks.
 
 ### The Configuration block
-Any Desired State Configuration document script starts with the word `Configuration` followed by the `name`  then a **script block** `{...}`,
-the following example shows **myconfig** acting as the name of a dsc configuration.
+Any Desired State Configuration document script starts with the word `Configuration` followed by a desired **name**  then a **script block** `{...}`,
+the following example shows **myconfig** acting as the name of a dsc configuration, the name can be any name you want it to. 
 
 ``` posh
 Configuration myconfig
@@ -80,7 +80,7 @@ Configuration Enceladus
 Congratulations! You have your first configuration block, now what's next?
 Well as you can notice, both our configuration block **myconfig** and **Enceladus** are empty, let's change that by  importing resources from a module into the DSC config.
 
-To do that we use the `Import-DscResource` cmdlet following the module name containing the resources we want to use, in that case the `PSDesiredStateConfiguration` module, now you must be wondering, how to know which module contains which resources? Good question, keep reading.
+To do that we use the `Import-DscResource` cmdlet following the module name containing the resources we want to use, in that case the `PSDesiredStateConfiguration` module, now you must be wondering, how do we know which module contains the right resources to use? Good question, please keep reading.
 
 ``` posh
 Configuration Enceladus
@@ -110,7 +110,7 @@ Windows PowerShell has a built-in function named `Get-DscResource` when executed
 Get-DscResource
 ```
 
-Output:
+**Output:**
 *certain values were omitted for the sake of displaying not too much data, yours might look slightly different.*
 
 ```
@@ -128,7 +128,7 @@ PowerShell      Archive                   PSDscResources                 2.12.0.
 
 ```
 
-Now if we look closely to the output, we can quickly notice that the *Name* column has a resource called `Service` and the *ModuleName* column explicitely tell us
+Now if we look closely to the output, we can quickly notice that the ***Name*** column has a resource called `Service` and the ***ModuleName*** column explicitely tell us
 the module name the resource belongs to, in that case it's belong to the `PSDesiredStateConfiguration` module.
 
 ```
@@ -150,7 +150,7 @@ Get-DscResource -Name "Service" -Module "PSDesiredStateConfiguration" | Select-O
 (Get-DscResource -Name "Service" -Module "PSDesiredStateConfiguration").Properties
 ```
 
-Output:
+**Output:**
 
 ```
 Name                 PropertyType   IsMandatory Values
@@ -170,9 +170,9 @@ State                [string]             False {Running, Stopped}
 
 ```
 
-Great! we have a promising output, notice that in the *Name* column there is a property called `State` it is **NotMandatory** and it can only be assigned one of those two values {**Running** or **Stopped**} their *PropertyType* should be a string, in the other hand if you look at the `Name` property in the *Name column* this one *IsMandatory* and only accepts a string as *PropertyType*.
+Great! we have a promising output, notice that in the ***Name*** column there is a property called `State` it is ***NotMandatory*** and it can only be assigned one of those two values {***Running*** or ***Stopped***} their ***PropertyType*** should be a string, in the other hand if you look at the `Name` property in the ***Name*** column this one ***IsMandatory*** and only accepts a string as ***PropertyType***.
 
-Whenever you notice the *IsMandatory* set to `True` that is mean in order to use the resource, we need to set the mandatory property into our configuration.
+Whenever you notice the ***IsMandatory*** set to `True` that is mean in order to use the resource, we need to set the mandatory property into our configuration.
 
 
 Understand the nested blocks (the **node** block and the **resource** block)
@@ -211,7 +211,7 @@ Configuration Enceladus
 }
 ```
 
-Now let's write our final configuration based on what we have learnt so far for the following scenario which was to create a dsc configuration named **Enceladus**, purpose was to make sure the windows service `BITS` status was **stopped** and stays **stopped** on the local machine.
+Now let's write our final configuration based on what we have learn so far, so the scenario was to create a dsc configuration named **Enceladus**, purpose was to make sure the windows service `BITS` status was **stopped** and stay **stopped** on the local machine.
 
 Here is everything we gathered and know:
 
@@ -238,10 +238,11 @@ Configuration Enceladus
 ```
 
 
-You should be pretty confident by now on writing your first dsc configuration, now test what you have learn.
+You should be pretty confident by now on writing your first dsc configuration, now let's test what you have learn.
 
 {:.box-warning}
-**Challenge: C01** Write a dsc configuration named `Europa` that will always set your local machine computer description to: **This is my automation machine.**, when found the resource name you'll use to execute the task give it a descriptive name of **EuropaDescription**.
+**Challenge: C01** Write a dsc configuration named `Europa` that will always set your local machine computer description to: **This is my automation machine.**. 
+The resource you will use, when found, give it a descriptive name of **EuropaDescription**.
 
 
 * Name of the configuration (**Europa**)
@@ -256,6 +257,11 @@ You are so far learning the basics and we will keep doing so until part 3 of thi
 
 {:.box-note}
 **Result:** [(*reveal C01*)](/challenge/?utm_source=blog&utm_medium=blog&utm_content=recent#c01)
+
+
+# You wrote your DSC config, now what ?
+
+Now let's talk about the pases that your configuration will go  through, this is very important to understand. 
 
 
 
