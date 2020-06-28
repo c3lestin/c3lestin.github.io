@@ -23,6 +23,11 @@ You are viewing the result for challenge C01
 - [x]  Name of the Resource description (**EuropaDescription**)
 - [x]  Name of the Resource properties we need (**Name, Description**)
 
+
+- [x] Finish my changes
+- [ ] Push my commits to GitHub
+- [ ] Open a pull request
+
 <br>
 
 #### Configuration
