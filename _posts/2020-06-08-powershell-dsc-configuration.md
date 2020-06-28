@@ -241,7 +241,7 @@ Configuration Enceladus
 You should be pretty confident by now on writing your first dsc configuration, now test what you have learn.
 
 {:.box-warning}
-**Challenge:01** Write a dsc configuration named `Europa` that will always set your local machine computer description to: **This is my automation machine.**, when found the resource name you'll use to execute the task give it a descriptive name of **EuropaDescription**.
+**Challenge:C01** Write a dsc configuration named `Europa` that will always set your local machine computer description to: **This is my automation machine.**, when found the resource name you'll use to execute the task give it a descriptive name of **EuropaDescription**.
 
 
 * Name of the configuration (**Europa**)
@@ -252,12 +252,10 @@ You should be pretty confident by now on writing your first dsc configuration, n
 * Name of the Resource properties we need (**...**)
 
 
-You are so far learning the basics and we will keep doing so until part 3 of this article, it is really important that you know how everything works before diving into some more advanced DSC concepts.
-
-I recommend first to solve the challenge, thus will ensure your understanding of what we have discussed so far and then keep reading.
+You are so far learning the basics and we will keep doing so until part 3 of this article, it is really important that you know how everything works before diving into some more advanced DSC concepts. I recommend first to solve the challenge before revealing it, thus will ensure you understand what we have discussed so far.
 
 {:.box-note}
-**Challenge:01 Result:** Click to reveal me **Chanllenge:01** 
+**Result:** [(Reveal C01)](https://docs.microsoft.com/en-us/powershell/scripting/dsc/getting-started/wingettingstarted?view=powershell-7)
 
 
 
