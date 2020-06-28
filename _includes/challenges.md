@@ -1,68 +1,40 @@
+# Index
+
+* TOC
+{:toc}
 
 
-# C01
+## C01
 
-```posh
-Configuration Enceladus
+You are viewing the result for challenge C01.
+
+### Challenge
+{:.box-warning}
+**Challenge:C01** Write a dsc configuration named `Europa` that will always set your local machine computer description to: **This is my automation machine.**, when found the resource name you'll use to execute the task give it a descriptive name of **EuropaDescription**.
+
+### Details
+* Name of the configuration (**Europa**)
+* Name of the module containing the resource to be used (**ComputerManagementDsc**)
+* Name of the target Node (**$env:COMPUTERNAME**)
+* Name of the Resource (**Computer**)
+* Name of the Resource description (**EuropaDescription*)
+* Name of the Resource properties we need (**Name, Description**)
+
+### Configuration
+````posh
+Configuration Europa
 {
-    Import-DscResource -Module PSDesiredStateConfiguration
-
+    Import-DscResource -Module ComputerManagementDsc
     Node $env:COMPUTERNAME
     {
-        Service EnceladusBits
+        Computer EuropaDescription
         {
-            Name  = "BITS"
-            State = "Stopped"
+            Name = "$env:COMPUTERNAME"
+            Description = "This is my automation machine."
         }
     }
 }
 ```
 
+Note: Applying this DSC Config might reboot your machine. 
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-# Find Me
-
-Yes you do fine me and that is great.
