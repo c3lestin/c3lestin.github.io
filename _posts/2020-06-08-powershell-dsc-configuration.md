@@ -258,7 +258,11 @@ You are so far learning the basics and we will keep doing so until part 3 of thi
 I recommend first to solve the challenge, thus will ensure your understanding of what we have discussed so far and then keep reading.
 
 {:.box-note}
-**Challenge result:** Click  **Chanllenge:01** 
+**Challenge:01 Result:** Click to reveal me **Chanllenge:01** 
+
+
+{:.box-success}
+**success:** Great you won!
 
 
 
