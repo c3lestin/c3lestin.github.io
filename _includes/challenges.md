@@ -15,7 +15,8 @@ You are viewing the result for challenge C01
 
 <br>
 
-#### Details
+Details of what we know so far:
+
 - [x]  Name of the configuration (**Europa**)
 - [x]  Name of the module containing the resource to be used (**ComputerManagementDsc**)
 - [x]  Name of the target Node (**$env:COMPUTERNAME**)
