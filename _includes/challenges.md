@@ -6,9 +6,7 @@
 
 ## C01
 
-You are viewing the result for challenge C01.
-
-<br>
+You are viewing the result for challenge C01
 
 #### Challenge
 
@@ -28,7 +26,7 @@ You are viewing the result for challenge C01.
 <br>
 
 #### Configuration
-
+your config should look like something like this
 ```posh
 Configuration Europa
 {
