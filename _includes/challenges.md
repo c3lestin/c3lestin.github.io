@@ -22,7 +22,9 @@ You are viewing the result for challenge C01.
 * Name of the Resource properties we need (**Name, Description**)
 
 #### Configuration
+
 <br>
+
 ```posh
 Configuration Europa
 {
