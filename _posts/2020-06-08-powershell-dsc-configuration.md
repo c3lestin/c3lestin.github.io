@@ -114,6 +114,7 @@ Windows PowerShell has a built-in function named `Get-DscResource` when executed
 
 Ok enough, let's run this command to gather available local DSC resource.
 
+**Command:**
 ``` posh
 Get-DscResource
 ```
@@ -148,7 +149,7 @@ PowerShell      Service                   PSDesiredStateConfiguration    1.1    
 
 Now to make sure that we can use the recently discovered `Service` resource for our scenario, let's retrieve all it's properties with the following command:
 
-
+**Command**
 ``` posh
 Get-DscResource -Name "Service" -Module "PSDesiredStateConfiguration" | Select-Object -ExpandProperty Properties
 ```
@@ -324,8 +325,31 @@ Configuration Cassini
 The next phase will be the **Enacting Phase**, you must know that the `Cassini` configuration we just authored need to be **compiled** first before we can **Enact** (apply) it.
 When you compile a DSC Configuration, it creates **MOF**(Managed Object Format) file.
 
-To do the compiling it is very simple, just write the name of the configuration in our case it is `Cassini` follow by the `-OutPath`  and `-Verbose` parameter, the verbose parameter is not mandatory but i suggest you put it so you can  see what's happening in the compiling process. 
+To do the compiling it is very simple, just write the name of the configuration in our case it is `Cassini` follow by the `-OutPath`  and `-Verbose` parameter, the verbose parameter is not mandatory but i suggest you put it so you can  see what's happening in the compiling process,
+but before you start compiming, you need to load your configuration first into memory, you can check the `Function` drive to confirm if it's there. Remember that a i said a DSC Configuration after all is nothing more than a special kind of PowerShell function. 
 
+**Command:**
+
+```posh
+ Get-ChildItem Function:
+```
+
+**Output:**
+```posh
+CommandType     Name                                               Version    Source                                                                                                                                                                              
+-----------     ----                                               -------    ------                                                                                                                                                                              
+Function        A:                                                                                                                                                                                                                            
+Function        BuildResourceCommonParameters                      1.0        WindowsOptionalFeatureSet                                                                                                                                                           
+Function        BuildResourceString                                1.0        WindowsOptionalFeatureSet                                                                                                                                                               
+Configuration   Cassini                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+Function        Clear-Host                                                                                                                                                                                                                                        
+Function        Configuration                                      1.1        PSDesiredStateConfiguration  
+```
+Notice something?  you can see in the output above that the `Cassini` configuration is loaded into the function drive and ready to be compiled.
+
+
+
+**Command:**
 ```posh
 Cassini -OutputPath "C:\temp\Demo\DSC" -Verbose
 ```
@@ -341,15 +365,14 @@ This will generated the **MOF** file containing my config in the `C:\temp\Demo\D
 
 Mode         LastWriteTime          Length   Name                                                                                                                                                                                                             
 ----         -------------------    ------   ----                                                                                                                                                                                                             
--a----       08-Jun-20     17:04    1886     CELESTINSB.mof
+-a----       08-Jun-20     17:04    1886     CYB00356.mof
 ```
-**Congratulation!** you've compiled your first DSC Configuration.
+**Congratulation!** you've compiled your first DSC Configuration, notice the generated `CYB00356.mof` file,  since we explicitely set the target node to be the localhost `$env:COMPUTERNAME` in the **Node** block in the DSC configuration, then the compiled **MOF** file name will be the name of the **target_node_name.MOF** 
+
 
 {:.box-warning}
 If when you run your command line you welcome  with an error saying ***'Cassini : The term 'Cassini' is not recognized as the name of a cmdlet, function, script file, or operable program.'*** 
-then that's mean the configuration is not in memory to fix this, select your authored configuration and load it to memory first then re-run your command. 
-
-
+then that's mean the configuration was not loaded in memory to fix this, select with your mouse your authored configuration and load it into memory and then re-run your command. 
 
 
  
