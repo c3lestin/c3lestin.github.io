@@ -323,6 +323,9 @@ Configuration Cassini
 The next phase will be the **Enacting Phase**, you must know that the `Cassini` configuration we just authored need to be **compiled** first before we can **Enact** (apply) it.
 When you compile a DSC Configuration, it creates **MOF**(Managed Object Format) file.
 
+
+## Compile a DSC Configuration
+
 To do the compiling it is very simple, just write the name of the configuration in our case it is `Cassini` follow by the `-OutPath`  and `-Verbose` parameter, the verbose parameter is not mandatory but i suggest you put it so you can  see what's happening in the compiling process,
 but before you start compiming, you need to load your configuration first into memory, you can check the `Function` drive to confirm if it's there. Remember that a i said a DSC Configuration after all is nothing more than a special kind of PowerShell function. 
 
@@ -348,6 +351,7 @@ Function        Disable-DscDebug                        1.1        PSDesiredStat
 
 Notice something?  you can see in the output above that the `Cassini` configuration is loaded into the function drive and ready to be compiled.
 Now you can run the following command to compile.
+
 
 
 **Command:**
