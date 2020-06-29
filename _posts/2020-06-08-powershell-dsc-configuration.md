@@ -277,14 +277,29 @@ Tere are two phases you will be dealing with when working with DSC Configuration
 We will dive into each phase.
 
 * **The Authoring and Staging  Phase:**
-This phase is all about preparations, this is where we can write configuration documents that explicitly define what and how the resources should be configured on the targeted system(s), as a matter of fact since in the beginning of this article we have been using the **authoring** and the **staging** phase. 
+This phase is all about preparations, this is where we can write configuration documents that explicitly define what and how the resources should be configured on the targeted system(s), as a matter of fact since the beginning of this article we have been using the **authoring** and the **staging** phase. 
+
 
 * **The Enacting Phase:**
-This phase is when we apply the staged configuration to the system(s) the staged configuration.
+This phase is when we apply the staged configuration to the targeted system(s) workstations or servers
 
 
 * **The Reporting Phase:**
-You staged your configuration, you applied it, but of course you want to keep track for any configuration drift, this is where the **reporting** phase becomes handy. 
+Ok! you've staged your configuration and applied it, but of course you want to keep track for any configuration drift, this is where the **reporting** phase becomes handy.
+
+
+<br>
+
+We have authored already a Configuration named `Europa` in our C01 Challenge, but let's authored and staged a new one. 
+
+Here is our new scenario: 
+
+{:.box-warning}
+**Scenario** Author a DSC configuration named `Cassini` on your localmachine that will ensure **Windows Update Service** is **running** and **start up type** is **automatic**
+
+
+
+
 
 
 
