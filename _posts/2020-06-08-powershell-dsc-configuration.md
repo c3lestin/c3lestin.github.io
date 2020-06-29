@@ -335,9 +335,19 @@ but before you start compiming, you need to load your configuration first into m
 ```
 
 **Output:**
+
 ```
-CommandType     Name                                               Version    Source                                                                                              -----------     ----                                               -------    ------                                                                                           Function        A:                                                                                                                                                          Function        BuildResourceCommonParameters                      1.0        WindowsOptionalFeatureSet                                                                         Function        BuildResourceString                                1.0        WindowsOptionalFeatureSet                                                                         Configuration   Cassini                                                                                                                                                         Function        Clear-Host                                                                                                                                                       Function        Configuration                                      1.1        PSDesiredStateConfiguration  
+CommandType     Name                                    Version    Source
+-----------     ----                                    -------    ------
+Function        BuildResourceCommonParameters           1.0        WindowsOptionalFeatureSet
+Function        BuildResourceString                     1.0        WindowsOptionalFeatureSet
+Configuration   Cassini
+Function        Configuration                           1.1        PSDesiredStateConfiguration
+Function        Connect-TO                              1.0.0.0    CYB.PowerShellProfile.ISE
+Function        ConvertFrom-SddlString                  3.1.0.0    Microsoft.PowerShell.Utility
+Function        Disable-DscDebug                        1.1        PSDesiredStateConfiguration
 ```
+
 Notice something?  you can see in the output above that the `Cassini` configuration is loaded into the function drive and ready to be compiled.
 Now you can run the following command to compile.
 
