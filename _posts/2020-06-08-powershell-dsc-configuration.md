@@ -454,7 +454,7 @@ In pull mode, pull clients are configured to get their desired state configurati
 ![pullmode](https://github.com/c3lestin/c3lestin.github.io/raw/master/_img/pull_mode.png)
 
 
-You must understand now that we will have to push our configuration to the locallachine since we did not set up any dsc pull service, we just did author a config and compiled it that's generated the MOF, now we need to **PUSH** it to the node, localhost. 
+You must understand now that we will have to push our configuration to the localmachine since we did not set up any dsc pull service, we just did author a config and compiled it that's generated the MOF, now we need to **PUSH** it to the target node, which is localhost. 
 
 
 
