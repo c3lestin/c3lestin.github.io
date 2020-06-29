@@ -296,7 +296,27 @@ Here is our new scenario:
 
 {:.box-warning}
 **Scenario** Author a DSC configuration named `Cassini` on your localmachine that will ensure **Windows Update Service** is **running** and **start up type** is **automatic**
+give the resource name a descriptive name of **WindowsUpdate**
 
+Let's go through all the phases with this scenario. 
+
+**Phase 1:** Authoring and Staging
+
+```posh
+Configuration Cassini
+{
+    Import-DscResource -Module PSDesiredStateConfiguration
+    Node $env:COMPUTERNAME
+    {
+        Service WindowsUpdate
+        {
+            Name        = "wuauserv"
+            State       = "Running"
+            StartupType = "Automatic"
+        }
+    }
+}
+```
 
 
 
