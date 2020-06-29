@@ -275,14 +275,14 @@ Tere are two phases you will be dealing with when working with DSC Configuration
 
 We will dive into each phase.
 
-* The Authoring and Staging  Phase
+* **The Authoring and Staging  Phase**
 This phase is all about preparations, this is where we can write configuration documents that explicitly define what and how the resources should be configured on the targeted system(s), as a matter of fact since in the beginning of this article we have been using the **authoring** and the **staging** phase. 
 
-* The Enacting Phase
+* **The Enacting Phase**
 This phase is when we apply the staged configuration to the system(s) the staged configuration.
 
 
-* The Reporting Phase
+* **The Reporting Phase**
 You staged your configuration, you applied it, but of course you want to keep track for any configuration drift, this is where the **reporting** phase becomes handy. 
 
 
