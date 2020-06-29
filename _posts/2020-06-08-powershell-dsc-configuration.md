@@ -110,7 +110,7 @@ Here is what we don't know:
 * Name of the Resource (...)
 * Name of the Resource properties (...)
 
-Windows PowerShell has a built-in function named `Get-DscResource` when executed, retrieves all the PowerShell DSC resources present on the computer, if you've never worked before with DSC, then when you execute the `Get-DscResource` command you mostly will be welcomed with the PowerShell in-box resources shown in the output result. Now of course they might not be enough for the needs of your company, but don't worry there is plethora of Custom DSC Resources from  Microsoft and Other vendors you can use or you can even create your own DSC Resources.  We will talk about how to create, where to get community dsc resources and how to import them in a dedicated post,  the PowerShell team at Microsoft has a git repo `https://github.com/powershell/dscresources` with some official resource kit modules or visit the `www.powershellgallery.com` for community-submited DSC resource modules.
+Windows PowerShell has a built-in function named `Get-DscResource` when executed, retrieves all the PowerShell DSC resources present on the computer, if you've never worked before with DSC, then when you execute the `Get-DscResource` command you mostly will be welcomed with the PowerShell in-box resources shown in the output result. Now of course they might not be enough for the needs of your company, but don't worry there is plethora of Custom DSC Resources from  Microsoft and Other vendors you can use or you can even create your own DSC Resources.  We will talk about how to create, where to get community dsc resources and how to import them in a dedicated post, but if you want to explorer them already the PowerShell team at Microsoft has a git repo `https://github.com/powershell/dscresources` with some official resource kit modules or visit the `www.powershellgallery.com` for community-submited DSC resource modules.
 
 Ok enough, let's run this command to gather available local DSC resource.
 
@@ -321,10 +321,33 @@ Configuration Cassini
 }
 ```
 
+The next phase will be the **Enacting Phase**, you must know that the `Cassini` configuration we just authored need to be **compiled** first before we can **Enact** (apply) it.
+When you compile a DSC Configuration, it creates **MOF**(Managed Object Format) file.
+
+To do the compiling it is very simple, just write the name of the configuration in our case it is `Cassini` follow by the `-OutPath`  and `-Verbose` parameter, the verbose parameter is not mandatory but i suggest you put it so you can  see what's happening in the compiling process. 
+
+```posh
+Cassini -OutputPath "C:\temp\Demo\DSC" -Verbose
+```
+
+This will generated the **MOF** file containing my config in the `C:\temp\Demo\DSC` folder. 
 
 
+**Output:**
+
+```
+    Directory: C:\temp\Demo\DSC
 
 
+Mode         LastWriteTime          Length   Name                                                                                                                                                                                                             
+----         -------------------    ------   ----                                                                                                                                                                                                             
+-a----       08-Jun-20     17:04    1886     CELESTINSB.mof
+```
+**Congratulation!** you've compiled your first DSC Configuration.
+
+{:.box-warning}
+If when you run your command line you welcome  with an error saying ***'Cassini : The term 'Cassini' is not recognized as the name of a cmdlet, function, script file, or operable program.'*** 
+then that's mean the configuration is not in memory to fix this, select your authored configuration and load it to memory first then re-run your command. 
 
 
 
