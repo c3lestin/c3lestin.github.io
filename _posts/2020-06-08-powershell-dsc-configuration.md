@@ -442,7 +442,7 @@ This lead me to talk about the two Model of DSC Configuration:
 
 # DSC Configuration  Models
 
-There is two model of DSC:
+There are two model of DSC:
 
 ## Push Model
 Push mode refers to a user actively applying a configuration to a target node by calling the `Start-DscConfiguration` cmdlet.
