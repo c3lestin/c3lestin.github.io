@@ -124,9 +124,8 @@ Get-DscResource
 
 ```
 ImplementedAs   Name                      ModuleName                     Version    Properties
--------------   ----                      ----------                     -------    ---------- 
-                                                                                                                
-PowerShell      PSRepository              PowerShellGet                  2.2.1      {Name, DependsOn, Ensure, InstallationPolicy...}                                              PowerShell      Archive                   PSDesiredStateConfiguration    1.1        {Destination, Path, Checksum, Credential...}                                                 
+-------------   ----                      ----------                     -------    ----------
+PowerShell      PSRepository              PowerShellGet                  2.2.1      {Name, DependsOn, Ensure, InstallationPolicy...}
 PowerShell      Registry                  PSDesiredStateConfiguration    1.1        {Key, ValueName, DependsOn, Ensure...}
 PowerShell      Script                    PSDesiredStateConfiguration    1.1        {GetScript, SetScript, TestScript, Credential...}
 PowerShell      Service                   PSDesiredStateConfiguration    1.1        {Name, BuiltInAccount, Credential, Dependencies...
@@ -134,7 +133,6 @@ Composite       ServiceSet                PSDesiredStateConfiguration    1.1    
 PowerShell      User                      PSDesiredStateConfiguration    1.1        {UserName, DependsOn, Description, Disabled...}
 PowerShell      WindowsProcess            PSDesiredStateConfiguration    1.1        {Arguments, Path, Credential, DependsOn...}
 PowerShell      Archive                   PSDscResources                 2.12.0.0   {Destination, Path, Checksum, Credential...}
-
 ```
 
 Now if we look closely to the output, we can quickly notice that the ***Name*** column has a resource called `Service` and the ***ModuleName*** column explicitely tell us
