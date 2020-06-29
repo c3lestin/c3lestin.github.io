@@ -292,7 +292,7 @@ Ok! you've staged your configuration and applied it, but of course you want to k
 
 <br>
 
-We have authored already a Configuration named `Europa` in our C01 Challenge, but let's authored and staged a new one. 
+We have authored already a Configuration named `Europa` in our [(reveal C01)](/challenge/?utm_source=blog&utm_medium=blog&utm_content=recent#c01) challenge, let's author and staged a new one to demonstrate the phases. 
 
 Here is our new scenario: 
 
