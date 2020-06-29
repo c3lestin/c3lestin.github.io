@@ -135,7 +135,7 @@ PowerShell      Archive                   PSDscResources                 2.12.0.
 ```
 
 Now if we look closely to the output, we can quickly notice that the ***Name*** column has a resource called `Service` and the ***ModuleName*** column explicitely tell us
-the module name the resource belongs to, in that case it's belong to the `PSDesiredStateConfiguration` module.
+the module name the resource belongs to, in that case it's belong to the `PSDesiredStateConfiguration` module, which is one of the built-in Windows Powershell module that reside in `"${env:SystemRoot}\System32\WindowsPowerShell\v1.0\Modules"` folder.
 
 ```
 ImplementedAs   Name                      ModuleName                     Version    Properties
