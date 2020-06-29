@@ -110,7 +110,9 @@ Here is what we don't know:
 * Name of the Resource (...)
 * Name of the Resource properties (...)
 
-Windows PowerShell has a built-in function named `Get-DscResource` when executed, retrieves all the PowerShell DSC resources present on the computer.
+Windows PowerShell has a built-in function named `Get-DscResource` when executed, retrieves all the PowerShell DSC resources present on the computer, if you've never worked before with DSC, then when you execute the `Get-DscResource` command you mostly will be welcomed with the PowerShell in-box resources shown in the output result. Now of course they might not be enough for the needs of your company, but don't worry there is plethora of Custom DSC Resources from  Microsoft and Other vendors you can use or you can even create your own DSC Resources.  We will talk about how to create, where to get community dsc resources and how to import them in a dedicated post,  the PowerShell team at Microsoft has a git repo `https://github.com/powershell/dscresources` with some official resource kit modules or visit the `www.powershellgallery.com` for community-submited DSC resource modules.
+
+Ok enough, let's run this command to gather available local DSC resource.
 
 ``` posh
 Get-DscResource
@@ -135,7 +137,8 @@ PowerShell      Archive                   PSDscResources                 2.12.0.
 ```
 
 Now if we look closely to the output, we can quickly notice that the ***Name*** column has a resource called `Service` and the ***ModuleName*** column explicitely tell us
-the module name the resource belongs to, in that case it's belong to the `PSDesiredStateConfiguration` module, which is one of the built-in Windows Powershell module that reside in `"${env:SystemRoot}\System32\WindowsPowerShell\v1.0\Modules"` folder.
+the module name the resource belongs to, in that case it's belong to the `PSDesiredStateConfiguration` module, which is one of the built-in Windows Powershell module that reside in `"${env:SystemRoot}\System32\WindowsPowerShell\v1.0\Modules"` folder. 
+
 
 ```
 ImplementedAs   Name                      ModuleName                     Version    Properties
@@ -317,6 +320,7 @@ Configuration Cassini
     }
 }
 ```
+
 
 
 
