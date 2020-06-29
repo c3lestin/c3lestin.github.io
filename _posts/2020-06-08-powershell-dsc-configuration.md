@@ -271,6 +271,7 @@ Before we go further, let's talk about the phases your configuration named `Euro
 Tere are two phases you will be dealing with when working with DSC Configuration:
 
 ## The Authoring and Staging Phase
+
 ## The Enacting and Reporting Phase
 
 We will dive into each phase.
