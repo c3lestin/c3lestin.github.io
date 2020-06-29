@@ -269,12 +269,9 @@ You are so far learning the basics and we will keep doing so until part 3 of thi
 
 # DSC Configuration phases
 
-Before we go further, let's talk about the phases your configuration named `Europa` will go through, this is  very important to understand. So grab a cup of coffee or tea and let's dive in.
-Tere are two phases you will be dealing with when working with DSC Configuration:
-
-## The Authoring and Staging Phase
-
-## The Enacting and Reporting Phase
+Before we go further, let's talk about the phases your configuration named `Europa` will go through, this is  very important to understand. So grab a cup of coffee or tea and let's dive in.There are two phases you will be dealing with when working with DSC Configuration:
+* The Authoring and Staging Phase 
+* The Enacting and  Reporting Phase
 
 We will dive into each phase.
 
@@ -301,6 +298,8 @@ Here is our new scenario:
 give the resource name a descriptive name of **WindowsUpdate**
 
 Let's go through all the phases with this scenario. 
+
+## The Authoring and Staging Phase 
 
 **Phase 1:** Authoring and Staging
 
@@ -379,6 +378,63 @@ Mode         LastWriteTime          Length   Name
 If when you run your command line you welcome  with an error saying ***'Cassini : The term 'Cassini' is not recognized as the name of a cmdlet, function, script file, or operable program.'*** 
 then that's mean the configuration was not loaded in memory to fix this, select with your mouse your authored configuration and load it into memory and then re-run your command. 
 
+## The Enacting and  Reporting Phase
+
+We have authored, staged and compiled, now it is time to finally enact our first DSC Configuration, but before we do so let's take a look inside the generated `CYB00356.mof` file, we want to know about the structure of this file, what is in there. 
+
+`CYB00356.mof` **Content**
+
+```
+/*
+@TargetNode='CYB00356'
+@GeneratedBy=CELESTIN
+@GenerationDate=06/08/2020 17:04:13
+@GenerationHost=CYB00356
+*/
+
+instance of MSFT_ServiceResource as $MSFT_ServiceResource1ref
+{
+ResourceID = "[Service]WindowsUpdate";
+ State = "Running";
+ SourceInfo = "::7::9::Service";
+ Name = "wuauserv";
+ StartupType = "Automatic";
+ ModuleName = "PSDesiredStateConfiguration";
+
+ModuleVersion = "1.0";
+
+ ConfigurationName = "Cassini";
+
+};
+instance of OMI_ConfigurationDocument
+
+
+                    {
+ Version="2.0.0";
+ 
+
+                        MinimumCompatibleVersion = "1.0.0";
+ 
+
+                        CompatibleVersionAdditionalProperties= {"Omi_BaseResource:ConfigurationName"};
+ 
+
+                        Author="CELESTIN";
+ 
+
+                        GenerationDate="06/08/2020 17:04:13";
+ 
+
+                        GenerationHost="CYB00356";
+ 
+
+                        Name="Cassini";
+
+
+                    };
+```
+
+For the sake of keeping the Part I of this article basic, we won't dive into the details of the content of the MOF file, Part II of the article will dive deep in teh details for now, i wanted just to give you a look of what's in there. 
 
  
 [comment]: <> (## LCM)
