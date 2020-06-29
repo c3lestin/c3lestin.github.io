@@ -16,6 +16,12 @@ Desired State Configuration [(DSC)](https://docs.microsoft.com/en-us/powershell/
 # Why DSC configuration ?
 When our golden system configuration(s) break or change, most of the time we find ourself asking "**What did change?**" we spend countless hours trying to figure out what have changed, this is where PowerShell Desired State Configurations become handy, DSC can `ENSURE` that our system has the correct configurations no matter what by preventing configurations drift.
 
+The main advantages of DSC are: 
+
+- Simplyfying system admnistrators task  (*A system admin, can for example configured one or more devices automatically*)
+- Identical configurations everywhere (*Very handy for standardisation*)
+
+
 # DSC Structure
 A configuration is nothing more than a special kind of powershell function, the following example shows the anatomy of a basic DSC configuration.
 
@@ -261,7 +267,23 @@ You are so far learning the basics and we will keep doing so until part 3 of thi
 
 # DSC Configuration phases
 
-Let's talk about the phases your configuration named `Europa` will go through, this is very important to understand. So grab a cup of coffee or tea and let's dive in.
+Before we go further, let's talk about the phases your configuration named `Europa` will go through, this is  very important to understand. So grab a cup of coffee or tea and let's dive in.
+Tere are two phases you will be dealing with when working with DSC Configuration:
+
+## The Authoring and Staging Phase
+## The Enacting and Reporting Phase
+
+We will dive into each phase.
+
+### The Authoring and Staging  Phase
+This phase is all about preparations, this is where we can write configuration documents that explicitly define what and how the resources should be configured on the targeted system(s), as a matter of fact since in the beginning of this article we have been using the **authoring** and the **staging** phase. 
+
+### The Enacting Phase
+This phase is when we apply the staged configuration to the system(s) the staged configuration.
+
+
+### The Reporting Phase
+You staged your configuration, you applied it, but of course you want to keep track for any configuration drift, this is where the **reporting** phase becomes handy. 
 
 
 
