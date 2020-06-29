@@ -446,11 +446,13 @@ There are two model of DSC:
 
 ## Push Model
 Push mode refers to a user actively applying a configuration to a target node by calling the `Start-DscConfiguration` cmdlet.
+
 ![pushmode](https://github.com/c3lestin/c3lestin.github.io/raw/master/_img/push_mode.png)
 
 
 ## Pull Model
 In pull mode, pull clients are configured to get their desired state configurations from a remote pull service.
+
 ![pullmode](https://github.com/c3lestin/c3lestin.github.io/raw/master/_img/pull_mode.png)
 
 
