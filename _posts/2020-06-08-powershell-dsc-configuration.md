@@ -325,8 +325,7 @@ When you compile a DSC Configuration, it creates **MOF**(Managed Object Format) 
 
 ### Compile a DSC Configuration
 
-To do the compiling it is very simple, just write the name of the configuration in our case it is `Cassini` follow by the `-OutPath`  and `-Verbose` parameter, the verbose parameter is not mandatory but i suggest you put it so you can  see what's happening in the compiling process,
-but before you start compiming, you need to load your configuration first into memory, you can check the `Function` drive to confirm if it's there. Remember that a i said a DSC Configuration after all is nothing more than a special kind of PowerShell function. 
+To do the compiling it is very simple, just write the name of the configuration in our case it is `Cassini` follow by the `-OutPath`  and `-Verbose` parameter, the verbose parameter is not mandatory but i suggest you put it so you can  see what's happening in the compiling process, before you start compiling, you need first to load your configuration into memory, you can check the `Function` drive to confirm if its there or not. Remember that a i said a DSC Configuration after all is nothing more than a special kind of PowerShell function, so this is why we look for it into this drive. 
 
 **Command:**
 
@@ -375,7 +374,7 @@ Mode         LastWriteTime          Length   Name
 
 
 {:.box-warning}
-If when you run your command line you welcome  with an error saying ***'Cassini : The term 'Cassini' is not recognized as the name of a cmdlet, function, script file, or operable program.'*** 
+If when you ran your command line you welcome  with an error saying ***'Cassini : The term 'Cassini' is not recognized as the name of a cmdlet, function, script file, or operable program.'*** 
 then that's mean the configuration was not loaded in memory to fix this, select with your mouse your authored configuration and load it into memory and then re-run your command. 
 
 ## The Enacting and  Reporting Phase
@@ -434,9 +433,35 @@ instance of OMI_ConfigurationDocument
                     };
 ```
 
-For the sake of keeping the Part I of this article basic, we won't dive into the details of the content of the MOF file, Part II of the article will dive deep in teh details for now, i wanted just to give you a look of what's in there. 
+Once you generated the **MOF** file this where the ***authoring process*** ends, now you are thinking more about applying the configuration, the ***enacting  process***. This `CYB00356.mof` file that we compiled can be stored either locally or on a pull server, either an SMB share or a DSC pull service repsoitory.
 
- 
+Now understand this, when you author a configuration **locally** like we did, you can apply this configuration by **Pushing** it to a target node in our case we will do so to the local machine.  But also keep in mind that when you author a configuration on a **DSC Pull server**, then it is the target node job to **Pull** the configuration from the pull server and enact (apply) it. 
+
+
+This lead me to talk about the two Model of DSC Configuration: 
+
+# DSC Configuration  Models
+
+There is two model of DSC:
+
+## Push Model
+Push mode refers to a user actively applying a configuration to a target node by calling the `Start-DscConfiguration` cmdlet.
+![pushmode](https://github.com/c3lestin/c3lestin.github.io/raw/master/_img/push_mode.png)
+
+
+## Pull Model
+In pull mode, pull clients are configured to get their desired state configurations from a remote pull service.
+![pullmode](https://github.com/c3lestin/c3lestin.github.io/raw/master/_img/pull_mode.png)
+
+
+You must understand now that we will have to push our configuration to the locallachine since we did not set up any dsc pull service, we just did author a config and compiled it that's generated the MOF, now we need to **PUSH** it to the node, localhost. 
+
+
+
+
+
+
+
 [comment]: <> (## LCM)
 
 [comment]: <> (The Local Configuration Manager **(LCM)** is the engine of Desired State Configuration (DSC). The LCM runs on every target node, and is responsible for parsing and enacting configurations that are sent to the node. It is also responsible for a number of other aspects of DSC, including the following.)
@@ -445,13 +470,3 @@ For the sake of keeping the Part I of this article basic, we won't dive into the
 [comment]: <> (* Specifying how often a node pulls and enacts configurations.)
 [comment]: <> (* Associating the node with pull service.)
 [comment]: <> (* Specifying partial configurations.)
-
-[comment]: <> (## Pull Model)
-[comment]: <> (In pull mode, pull clients are configured to get their desired state configurations from a remote pull service.) 
-
-[comment]: <> (![pullmode](https://github.com/c3lestin/c3lestin.github.io/raw/master/_img/pull_mode.png))
-
-[comment]: <> (## Push Model)
-[comment]: <> (Push mode refers to a user actively applying a configuration to a target node by calling the `Start-DscConfiguration` cmdlet.)
-
-[comment]: <> (![pushmode](https://github.com/c3lestin/c3lestin.github.io/raw/master/_img/push_mode.png))
