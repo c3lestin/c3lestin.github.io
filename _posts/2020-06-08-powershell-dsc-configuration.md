@@ -275,15 +275,15 @@ Before we go further, let's talk about the phases your configuration named `Euro
 
 We will dive into each phase.
 
-* **The Authoring and Staging  Phase:**
+**The Authoring and Staging  Phase:**
 This phase is all about preparations, this is where we can write configuration documents that explicitly define what and how the resources should be configured on the targeted system(s), as a matter of fact since the beginning of this article we have been using the **authoring** and the **staging** phase. 
 
 
-* **The Enacting Phase:**
+**The Enacting Phase:**
 This phase is when we apply the staged configuration to the targeted system(s) workstations or servers
 
 
-* **The Reporting Phase:**
+**The Reporting Phase:**
 Ok! you've staged your configuration and applied it, but of course you want to keep track for any configuration drift, this is where the **reporting** phase becomes handy.
 
 
