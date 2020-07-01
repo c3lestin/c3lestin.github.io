@@ -512,11 +512,9 @@ Here is a brief explanation of the one we will mostly used in this article, for 
 I will explain in details each command in the upcoming Part II of this article, for now let's just enact(apply) our configuration for the sake of showing you how to complete the The Enacting and  Reporting Phase.
 
 The `Start-DscConfiguration` command is the one that we will use to apply or enact the **Cassini** configuration, we give it the **-Path** parameter,
-bear in mind that the path should the location where you compiled the **Cassini** configuration. In my case i compiled the MOF in `C:\temp\Demo\DSC" folder` and also notice that i use
-the **-Wait** and the **-Verbose** are being used.
+bear in mind that the path should the location where you compiled the **Cassini** configuration. In my case i compiled the MOF in `C:\temp\Demo\DSC` folder and also notice that i use the **-Wait** and the **-Verbose** parameter to get some output of what is happening.
 
-As i said earlier, in the upcoming Part II of this article, i will explain in details what each command does, for now just know that the `Start-DscConfiguration` command all it does 
-is grab the `CYB00356.mof` file we did compiled earlier and **PUSH** it to the target node as pending configuration and immediately apply it. 
+As i said earlier, in the upcoming Part II of this article, i will explain in details what each command does, for now just know that the `Start-DscConfiguration` command all it does is grab the `CYB00356.mof` file we did compiled earlier and **PUSH** it to the target node as pending configuration and immediately apply it. 
 
 **Command:**
 
@@ -527,25 +525,20 @@ Start-DscConfiguration -Path "C:\temp\Demo\DSC" -Wait -Verbose
 **Output:**
 
 ```
-VERBOSE: Perform operation 'Invoke CimMethod' with following parameters, ''methodName' = SendConfigurationApply,'className' = MSFT_DSCLocalConfigurationManager,'namespaceName' = root/Mic
-rosoft/Windows/DesiredStateConfiguration'.
+VERBOSE: Perform operation 'Invoke CimMethod' with following parameters, ''methodName' = SendConfigurationApply,'className' = MSFT_DSCLocalConfigurationManager,'namespaceName' = root/Microsoft/Windows/DesiredStateConfiguration'.
 VERBOSE: An LCM method call arrived from computer CYB00356 with user sid S-1-5-21-9373513-708069497-1238792691-1001.
 VERBOSE: [CYB00356]: LCM:  [ Start  Set      ]
 VERBOSE: [CYB00356]: LCM:  [ Start  Resource ]  [[Service]WindowsUpdate]
 VERBOSE: [CYB00356]: LCM:  [ Start  Test     ]  [[Service]WindowsUpdate]
-VERBOSE: [CYB00356]:                            [[Service]WindowsUpdate] Perform operation 'Query CimInstances' with following parameters, ''queryExpression' = SELECT * FROM Win32_Serv
-ice WHERE Name='wuauserv','queryDialect' = WQL,'namespaceName' = root\cimv2'.
+VERBOSE: [CYB00356]:                            [[Service]WindowsUpdate] Perform operation 'Query CimInstances' with following parameters, ''queryExpression' = SELECT * FROM Win32_Service WHERE Name='wuauserv','queryDialect' = WQL,'namespaceName' = root\cimv2'.
 VERBOSE: [CYB00356]:                            [[Service]WindowsUpdate] Operation 'Query CimInstances' complete.
 VERBOSE: [CYB00356]:                            [[Service]WindowsUpdate] Startup type for service 'wuauserv' is 'Manual'. It does not match 'Automatic'.
 VERBOSE: [CYB00356]: LCM:  [ End    Test     ]  [[Service]WindowsUpdate]  in 2.1400 seconds.
 VERBOSE: [CYB00356]: LCM:  [ Start  Set      ]  [[Service]WindowsUpdate]
-VERBOSE: [CYB00356]:                            [[Service]WindowsUpdate] Service 'wuauserv' already exists. Write properties such as Status, DisplayName, Description, Dependencies will
- be ignored for existing services.
-VERBOSE: [CYB00356]:                            [[Service]WindowsUpdate] Perform operation 'Query CimInstances' with following parameters, ''queryExpression' = SELECT * FROM Win32_Serv
-ice WHERE Name='wuauserv','queryDialect' = WQL,'namespaceName' = root\cimv2'.
+VERBOSE: [CYB00356]:                            [[Service]WindowsUpdate] Service 'wuauserv' already exists. Write properties such as Status, DisplayName, Description, Dependencies willbe ignored for existing services.
+VERBOSE: [CYB00356]:                            [[Service]WindowsUpdate] Perform operation 'Query CimInstances' with following parameters, ''queryExpression' = SELECT * FROM Win32_Service WHERE Name='wuauserv','queryDialect' = WQL,'namespaceName' = root\cimv2'.
 VERBOSE: [CYB00356]:                            [[Service]WindowsUpdate] Operation 'Query CimInstances' complete.
-VERBOSE: [CYB00356]:                            [[Service]WindowsUpdate] Perform operation 'Invoke CimMethod' with following parameters, ''instance' = Win32_Service: Windows Update (Na
-me = "wuauserv"),'methodName' = Change,'namespaceName' = root/cimv2'.
+VERBOSE: [CYB00356]:                            [[Service]WindowsUpdate] Perform operation 'Invoke CimMethod' with following parameters, ''instance' = Win32_Service: Windows Update (Name = "wuauserv"),'methodName' = Change,'namespaceName' = root/cimv2'.
 VERBOSE: [CYB00356]:                            [[Service]WindowsUpdate] Operation 'Invoke CimMethod' complete.
 VERBOSE: [CYB00356]:                            [[Service]WindowsUpdate] Service 'wuauserv' already started, no action required.
 VERBOSE: [CYB00356]: LCM:  [ End    Set      ]  [[Service]WindowsUpdate]  in 1.0230 seconds.
@@ -556,6 +549,7 @@ VERBOSE: Operation 'Invoke CimMethod' complete.
 VERBOSE: Time taken for configuration job to complete is 5.414 seconds
 ```
 
+Let's make a quick interpretation of the output. 
 
 
 
