@@ -377,7 +377,7 @@ Mode         LastWriteTime          Length   Name
 If when you ran your command line you welcome  with an error saying ***'Cassini : The term 'Cassini' is not recognized as the name of a cmdlet, function, script file, or operable program.'*** 
 then that's mean the configuration was not loaded in memory to fix this, select with your mouse your authored configuration and load it into memory and then re-run your command. 
 
-## The Enacting and  Reporting Phase
+* The Enacting and  Reporting Phase
 
 We have authored, staged and compiled, now it is time to finally enact our first DSC Configuration, but before we do so let's take a look inside the generated `CYB00356.mof` file, we want to know about the structure of this file, what is in there. 
 
@@ -458,6 +458,104 @@ In pull mode, pull clients are configured to get their desired state configurati
 
 You must understand now that we will have to push our configuration to the localmachine since we did not set up any dsc pull service, we just did author a config and compiled it that's generated the MOF, now we need to **PUSH** it to the target node, which is localhost. 
 
+## The Enacting and  Reporting Phase
+
+We have a set of DSC commands that help in the configuration staging, enacting and reporting, they are exported from the **PSDesiredStateConfiguration** the DSC built-in module.
+
+**Command:**
+
+```posh
+Get-Command -Module "PSDesiredStateConfiguration" -Noun "DscConfiguration"
+```
+
+**Output:**
+
+```
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Function        Configuration                                      1.1        PSDesiredStateConfiguration
+Function        Disable-DscDebug                                   1.1        PSDesiredStateConfiguration
+Function        Enable-DscDebug                                    1.1        PSDesiredStateConfiguration
+Function        Get-DscConfiguration                               1.1        PSDesiredStateConfiguration
+Function        Get-DscConfigurationStatus                         1.1        PSDesiredStateConfiguration
+Function        Get-DscLocalConfigurationManager                   1.1        PSDesiredStateConfiguration
+Function        Get-DscResource                                    1.1        PSDesiredStateConfiguration
+Function        New-DscChecksum                                    1.1        PSDesiredStateConfiguration
+Function        Remove-DscConfigurationDocument                    1.1        PSDesiredStateConfiguration
+Function        Restore-DscConfiguration                           1.1        PSDesiredStateConfiguration
+Function        Stop-DscConfiguration                              1.1        PSDesiredStateConfiguration
+Cmdlet          Invoke-DscResource                                 1.1        PSDesiredStateConfiguration
+Cmdlet          Publish-DscConfiguration                           1.1        PSDesiredStateConfiguration
+Cmdlet          Set-DscLocalConfigurationManager                   1.1        PSDesiredStateConfiguration
+Cmdlet          Start-DscConfiguration                             1.1        PSDesiredStateConfiguration
+Cmdlet          Test-DscConfiguration                              1.1        PSDesiredStateConfiguration
+Cmdlet          Update-DscConfiguration                            1.1        PSDesiredStateConfiguration
+```
+
+<br>
+
+Here is a brief explanation of the one we will mostly used in this article, for a complete explanation feel free to dive into this Doc.
+
+
+| Cmdlet | Description | Phases |
+| :------ |:--- | :--- |
+| Get-DscConfiguration | retrieves the current state of the resource configuration | Configuration reporting |
+| Get- DscConfigurationStatus | retrieves the status of completed configuration runs | Configuration reporting |
+| Test-DscConfiguration | tests if a target node's configuration is in the desired state or not | Configuration reporting |
+| Publish- DscConfiguration | publishes a MOF file to a target node as pending configuration | Configuration Staging |
+| Start-DscConfiguration | publishes a MOF file to a target node as pending configuration and also enacts it | Configuration Staging and enacting |
+| Update-DscConfiguration | publish and enact configuration in one go or enact a staged configuration by using -UseExisting | Configuration Staging and enacting |
+| Stop-DscConfiguration | Stops a running configuration | Configuration enacting |
+| Restore- DscConfiguration | restores target node to a previous configuration | Configuration enacting |
+| RemoveDscConfigurationDocument | removes a specified configuration from the target node's configuration store | Configuration Staging and enacting |
+
+
+I will explain in details each command in the upcoming Part II of this article, for now let's just enact(apply) our configuration for the sake of showing you how to complete the The Enacting and  Reporting Phase.
+
+The `Start-DscConfiguration` command is the one that we will use to apply or enact the **Cassini** configuration, we give it the **-Path** parameter,
+bear in mind that the path should the location where you compiled the **Cassini** configuration. In my case i compiled the MOF in `C:\temp\Demo\DSC" folder` and also notice that i use
+the **-Wait** and the **-Verbose** are being used.
+
+As i said earlier, in the upcoming Part II of this article, i will explain in details what each command does, for now just know that the `Start-DscConfiguration` command all it does 
+is grab the `CYB00356.mof` file we did compiled earlier and **PUSH** it to the target node as pending configuration and immediately apply it. 
+
+**Command:**
+
+```posh
+Start-DscConfiguration -Path "C:\temp\Demo\DSC" -Wait -Verbose
+```
+
+**Output:**
+
+```
+VERBOSE: Perform operation 'Invoke CimMethod' with following parameters, ''methodName' = SendConfigurationApply,'className' = MSFT_DSCLocalConfigurationManager,'namespaceName' = root/Mic
+rosoft/Windows/DesiredStateConfiguration'.
+VERBOSE: An LCM method call arrived from computer CYB00356 with user sid S-1-5-21-9373513-708069497-1238792691-1001.
+VERBOSE: [CYB00356]: LCM:  [ Start  Set      ]
+VERBOSE: [CYB00356]: LCM:  [ Start  Resource ]  [[Service]WindowsUpdate]
+VERBOSE: [CYB00356]: LCM:  [ Start  Test     ]  [[Service]WindowsUpdate]
+VERBOSE: [CYB00356]:                            [[Service]WindowsUpdate] Perform operation 'Query CimInstances' with following parameters, ''queryExpression' = SELECT * FROM Win32_Serv
+ice WHERE Name='wuauserv','queryDialect' = WQL,'namespaceName' = root\cimv2'.
+VERBOSE: [CYB00356]:                            [[Service]WindowsUpdate] Operation 'Query CimInstances' complete.
+VERBOSE: [CYB00356]:                            [[Service]WindowsUpdate] Startup type for service 'wuauserv' is 'Manual'. It does not match 'Automatic'.
+VERBOSE: [CYB00356]: LCM:  [ End    Test     ]  [[Service]WindowsUpdate]  in 2.1400 seconds.
+VERBOSE: [CYB00356]: LCM:  [ Start  Set      ]  [[Service]WindowsUpdate]
+VERBOSE: [CYB00356]:                            [[Service]WindowsUpdate] Service 'wuauserv' already exists. Write properties such as Status, DisplayName, Description, Dependencies will
+ be ignored for existing services.
+VERBOSE: [CYB00356]:                            [[Service]WindowsUpdate] Perform operation 'Query CimInstances' with following parameters, ''queryExpression' = SELECT * FROM Win32_Serv
+ice WHERE Name='wuauserv','queryDialect' = WQL,'namespaceName' = root\cimv2'.
+VERBOSE: [CYB00356]:                            [[Service]WindowsUpdate] Operation 'Query CimInstances' complete.
+VERBOSE: [CYB00356]:                            [[Service]WindowsUpdate] Perform operation 'Invoke CimMethod' with following parameters, ''instance' = Win32_Service: Windows Update (Na
+me = "wuauserv"),'methodName' = Change,'namespaceName' = root/cimv2'.
+VERBOSE: [CYB00356]:                            [[Service]WindowsUpdate] Operation 'Invoke CimMethod' complete.
+VERBOSE: [CYB00356]:                            [[Service]WindowsUpdate] Service 'wuauserv' already started, no action required.
+VERBOSE: [CYB00356]: LCM:  [ End    Set      ]  [[Service]WindowsUpdate]  in 1.0230 seconds.
+VERBOSE: [CYB00356]: LCM:  [ End    Resource ]  [[Service]WindowsUpdate]
+VERBOSE: [CYB00356]: LCM:  [ End    Set      ]
+VERBOSE: [CYB00356]: LCM:  [ End    Set      ]    in  5.0360 seconds.
+VERBOSE: Operation 'Invoke CimMethod' complete.
+VERBOSE: Time taken for configuration job to complete is 5.414 seconds
+```
 
 
 
