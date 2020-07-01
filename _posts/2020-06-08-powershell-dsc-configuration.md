@@ -377,7 +377,7 @@ Mode         LastWriteTime          Length   Name
 If when you ran your command line you welcome  with an error saying ***'Cassini : The term 'Cassini' is not recognized as the name of a cmdlet, function, script file, or operable program.'*** 
 then that's mean the configuration was not loaded in memory to fix this, select with your mouse your authored configuration and load it into memory and then re-run your command. 
 
-* The Enacting and  Reporting Phase
+## The Enacting and  Reporting Phase
 
 We have authored, staged and compiled, now it is time to finally enact our first DSC Configuration, but before we do so let's take a look inside the generated `CYB00356.mof` file, we want to know about the structure of this file, what is in there. 
 
@@ -458,14 +458,13 @@ In pull mode, pull clients are configured to get their desired state configurati
 
 You must understand now that we will have to push our configuration to the localmachine since we did not set up any dsc pull service, we just did author a config and compiled it that's generated the MOF, now we need to **PUSH** it to the target node, which is localhost. 
 
-## The Enacting and  Reporting Phase
 
 We have a set of DSC commands that help in the configuration staging, enacting and reporting, they are exported from the **PSDesiredStateConfiguration** the DSC built-in module.
 
 **Command:**
 
 ```posh
-Get-Command -Module "PSDesiredStateConfiguration" -Noun "DscConfiguration"
+Get-Command -Module "PSDesiredStateConfiguration"
 ```
 
 **Output:**
