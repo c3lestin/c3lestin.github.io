@@ -498,15 +498,15 @@ Here is a brief explanation of the one we will mostly used in this article, for 
 
 | Cmdlet | Description | Phases |
 | :------ |:--- | :--- |
-| Get-DscConfiguration | retrieves the current state of the resource configuration | Configuration reporting |
-| Get- DscConfigurationStatus | retrieves the status of completed configuration runs | Configuration reporting |
-| Test-DscConfiguration | tests if a target node's configuration is in the desired state or not | Configuration reporting |
-| Publish- DscConfiguration | publishes a MOF file to a target node as pending configuration | Configuration Staging |
-| Start-DscConfiguration | publishes a MOF file to a target node as pending configuration and also enacts it | Configuration Staging and enacting |
-| Update-DscConfiguration | publish and enact configuration in one go or enact a staged configuration by using -UseExisting | Configuration Staging and enacting |
-| Stop-DscConfiguration | Stops a running configuration | Configuration enacting |
-| Restore- DscConfiguration | restores target node to a previous configuration | Configuration enacting |
-| RemoveDscConfigurationDocument | removes a specified configuration from the target node's configuration store | Configuration Staging and enacting |
+| Get-DscConfiguration | retrieves current state of the resource configuration | Conf. reporting |
+| Get- DscConfigurationStatus | retrieves status of completed configuration runs | Conf. reporting |
+| Test-DscConfiguration | tests if target node is in the desired state or not | Conf. reporting |
+| Publish- DscConfiguration | publishes a MOF file to a target node as pending configuration | Conf. Staging |
+| Start-DscConfiguration | publishes a MOF file to a target node as pending configuration and also enacts it | Conf. Staging and enacting |
+| Update-DscConfiguration | publish and enact configuration in one go or enact a staged configuration by using -UseExisting | Conf. Staging and enacting |
+| Stop-DscConfiguration | Stops a running configuration | Conf. enacting |
+| Restore- DscConfiguration | restores target node to a previous configuration | Conf. enacting |
+| RemoveDscConfigurationDocument | removes a specified configuration from the target node's configuration store | Conf. Staging and enacting |
 
 
 I will explain in details each command in the upcoming Part II of this article, for now let's just enact(apply) our configuration for the sake of showing you how to complete the The Enacting and  Reporting Phase.
