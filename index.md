@@ -5,7 +5,7 @@ subtitle: It's all about IT Security, Automation, Artificial Intelligence, Scien
 ---
 
 
-I am a Workplace Engineer for Synergics focus on automation and security. I love learning and love sharing knowledge, I do it for fun, been passionate about artificial intelligence and IT security for a very long time now. I learn new things every day, i build this blog, it's  primary goal is to share my discoveries.  
+I am an IT Security Engineer, we are living in the era of data, everything is being digitalized, thus bring the need of taking seriously data protection, been passionate about artificial intelligence and IT security for a very long time. I learn new things every day, i build this blog, it's  primary goal is to share my discoveries.  
 
 
 # Recent Articles
