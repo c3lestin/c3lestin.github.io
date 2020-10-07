@@ -5,7 +5,7 @@ subtitle: It's all about IT Security, Automation, Artificial Intelligence, Scien
 ---
 
 
-I am an IT Security Engineer, we are living in the era of data, everything is being digitalized, thus bring the need of taking seriously data protection, been passionate about artificial intelligence and IT security for a very long time. I learn new things every day, i build this blog, it's  primary goal is to share my discoveries.  
+We are living in the era of data, in our modern society everything is being digitalized also we are seeing an exponential growth of online devices that can be hacked, thus data protection should be taken very seriously, been passionate about artificial intelligence and IT security for a very long time, i constantly learning new things, i build this blog it's  primary goal is to share my discoveries.  
 
 
 # Recent Articles
