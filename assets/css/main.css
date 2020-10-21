@@ -249,7 +249,7 @@ img {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .navbar-custom .nav-item.dropdown:hover {
     background: rgba(0, 0, 0, 0.1);
   }
@@ -277,7 +277,7 @@ img {
   font-weight: normal;
 }
 
-@media (min-width: 1199px) {
+@media (min-width: 768px) {
   .navbar-custom .nav-item.dropdown .dropdown-menu {
     text-align: center;
   }
