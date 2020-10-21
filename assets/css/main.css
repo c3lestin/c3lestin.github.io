@@ -289,7 +289,7 @@ img {
   }
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1399px) {
   .navbar-custom .navbar-collapse {
     border-top: 1px solid {{ site.navbar-border-col | default: "#EAEAEA" }};
     margin: 0 -1rem;
@@ -309,6 +309,7 @@ img {
 
   .navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item {
     padding-left: 2rem;
+    text-align: left;
   }
 }
 
