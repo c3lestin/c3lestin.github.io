@@ -493,21 +493,6 @@ Cmdlet          Update-DscConfiguration                            1.1        PS
 
 <br>
 
-Here is a brief explanation of the one we will mostly used in this article, for a complete explanation feel free to dive into this Doc.
-
-
-| Cmdlet | Description | Phases |
-| :------ |:--- | :--- |
-| Get-DscConfiguration | retrieves current state of the resource configuration | Conf. reporting |
-| Get- DscConfigurationStatus | retrieves status of completed configuration runs | Conf. reporting |
-| Test-DscConfiguration | tests if target node is in the desired state or not | Conf. reporting |
-| Publish- DscConfiguration | publishes a MOF file to a target node as pending configuration | Conf. Staging |
-| Start-DscConfiguration | publishes a MOF file to a target node as pending configuration and also enacts it | Conf. Staging and enacting |
-| Update-DscConfiguration | publish and enact configuration in one go or enact a staged configuration by using -UseExisting | Conf. Staging and enacting |
-| Stop-DscConfiguration | Stops a running configuration | Conf. enacting |
-| Restore- DscConfiguration | restores target node to a previous configuration | Conf. enacting |
-| RemoveDscConfigurationDocument | removes a specified configuration from the target node's configuration store | Conf. Staging and enacting |
-
 
 I will explain in details each command in the upcoming Part II of this article, for now let's just enact(apply) our configuration for the sake of showing you how to complete the The Enacting and  Reporting Phase.
 
