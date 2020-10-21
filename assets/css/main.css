@@ -75,7 +75,7 @@ hr.small {
 .main-content {
   padding-top: 5rem;
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .main-content {
     padding-top: 8.125rem;
   }
@@ -112,7 +112,7 @@ img {
   margin-top: 1.875rem;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .disqus-comments {
     margin-top: 2.5rem;
   }
@@ -224,7 +224,7 @@ img {
   border-width: 0.4em;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .navbar-custom {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
@@ -249,7 +249,7 @@ img {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .navbar-custom .nav-item.dropdown:hover {
     background: rgba(0, 0, 0, 0.1);
   }
