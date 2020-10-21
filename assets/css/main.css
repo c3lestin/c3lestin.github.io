@@ -75,7 +75,7 @@ hr.small {
 .main-content {
   padding-top: 5rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .main-content {
     padding-top: 8.125rem;
   }
@@ -289,7 +289,7 @@ img {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
   .navbar-custom .navbar-collapse {
     border-top: 1px solid {{ site.navbar-border-col | default: "#EAEAEA" }};
     margin: 0 -1rem;
