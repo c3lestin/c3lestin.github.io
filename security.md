@@ -10,4 +10,4 @@ We are living in the era of data, in our modern society everything is being digi
 
 # Recent Articles
 Find all of the fresh goodies regarding IT Security here.
-{% include IT_Security_recent_posts,md %}* [More](sitemap/?utm_source=blog&utm_medium=blog&utm_content=recent)
+{% include IT_Security_recent_posts.md %}* [More](sitemap/?utm_source=blog&utm_medium=blog&utm_content=recent)
