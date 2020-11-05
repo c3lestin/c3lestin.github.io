@@ -27,7 +27,7 @@ navbar-links:
     - PowerShell: "posh/?utm_source=blog&utm_medium=blog&utm_content=navbar"
     - Python: "underconstruction/?utm_source=blog&utm_medium=blog&utm_content=navbar"
   Security:
-    - Sysharding: "underconstruction/?utm_source=blog&utm_medium=blog&utm_content=navbar"
+    - Sysharding: "security/?utm_source=blog&utm_medium=blog&utm_content=navbar"
     - Pentesting: "underconstruction/?utm_source=blog&utm_medium=blog&utm_content=navbar"
   A.I:
     - M.L: "underconstruction/?utm_source=blog&utm_medium=blog&utm_content=navbar"
