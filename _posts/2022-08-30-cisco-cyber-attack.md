@@ -35,7 +35,7 @@ This blog post is to share with you 6 handy defensive measures that could have p
 
 # **Defense III** – Build an Incident Response Team 
 
-When you have threat actors within your network **you want to identify them as fast as possible**, every second that they spend within your network the outcome can be very but very destructive.  Now, your organization might not have a Security Incident Response Team (SIRT) or even a plan to build one, well [ENISA](https://www.enisa.europa.eu/) provided an [interactive map](https://www.enisa.europa.eu/topics/csirts-in-europe/csirt-inventory/certs-by-country-interactive-map#country=Belgium) of currently known CSIRTs by country.  
+When you have threat actors within your network **you want to identify them as fast as possible**, every second that they spend inside your network the outcome can be very but very destructive.  Now, your organization might not have a Security Incident Response Team (SIRT) or even a plan to build one, well [ENISA](https://www.enisa.europa.eu/) provided an [interactive map](https://www.enisa.europa.eu/topics/csirts-in-europe/csirt-inventory/certs-by-country-interactive-map#country=Belgium) of currently known CSIRTs by country.  
 
 Or may be your organization already have a Security Incident Response Team (SIRT), ask yourself how mature are they?  I invite you to use the [SIM3v1 self-assessment tool](https://www.enisa.europa.eu/topics/csirts-in-europe/csirt-capabilities/csirt-maturity/csirt-survey) from [ENISA](https://www.enisa.europa.eu/) to assess the maturity of your current incident response team. 
 
