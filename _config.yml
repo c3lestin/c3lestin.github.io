@@ -34,7 +34,7 @@ navbar-links:
     - M.L: "underconstruction/?utm_source=blog&utm_medium=blog&utm_content=navbar"
   Blog: 
     - Posts: "blog/?utm_source=blog&utm_medium=blog&utm_content=navbar"
-    - Search: "search/?utm_source=blog&utm_medium=blog&utm_content=navbar"
+    #- Search: "search/?utm_source=blog&utm_medium=blog&utm_content=navbar"
     - Tags: "tags/?utm_source=blog&utm_medium=blog&utm_content=navbar"
     - RSS: "feed.xml"
   Resources:
