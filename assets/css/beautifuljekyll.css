@@ -832,8 +832,8 @@ table {
   padding: 0;
 }
 table tr {
-  border-top: 1px solid #cccccc;
-  background-color: #ffffff;
+  border-top: 1px solid #495057;
+  background-color: rgb(29,29,29);
   margin: 0;
   padding: 0;
 }
@@ -842,16 +842,17 @@ table tr:nth-child(2n) {
 }
 table tr th {
   font-weight: bold;
-  border: 1px solid #cccccc;
+  border: 1px solid #495057;
   text-align: left;
   margin: 0;
   padding: 0.375rem 0.8125rem;
 }
 table tr td {
-  border: 1px solid #cccccc;
+  border: 1px solid #495057;
   text-align: left;
   margin: 0;
   padding: 0.375rem 0.8125rem;
+  background-color: rgb(29,29,29);
 }
 table tr th :first-child,
 table tr td :first-child {
