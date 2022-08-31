@@ -866,14 +866,14 @@ table tr td :last-child {
 
 code {
   padding: 0.125rem 0.25rem;
-  color: #adb5bd;
-  background-color: #f9f2f4;
+  color: #29ef98;
+  background-color: #000;
   border-radius: 0.25rem;
 }
 
 pre code {
   padding: 0;
-  background-color: 1e1e1e;
+  background-color: #1e1e1e;
   border-radius: 0;
 }
 
