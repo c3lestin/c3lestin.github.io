@@ -4,6 +4,7 @@ title: "Security Incident Response: Useful Tools (Part I)"
 date: 2021-11-10
 tags: [IT Security,Cybersecurity,Incident Response,Everything]
 share-img: "https://github.com/c3lestin/c3lestin.github.io/raw/master/_img/Ux7xZKPDDwGGin4V-image-1650975047445.png"
+cover-img: "https://github.com/c3lestin/c3lestin.github.io/raw/master/_img/sec-tools.jpg"
 ---
 
 I have gathered some handy tools that would definitely help when responding to Security Incidents, this is part I in a 5 part series.<!--more-->
