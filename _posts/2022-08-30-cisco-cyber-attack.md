@@ -35,7 +35,7 @@ This blog post is to share with you 6 handy defensive measures that could have p
 
 # **Defense III** – Build an Incident Response Team 
 
-When you have threat actors within your network **you want to identify them as fast as possible**, every second that they spend inside your network the outcome can be very but very destructive.  Now, your organization might not have a Security Incident Response Team (SIRT) or even a plan to build one, well [ENISA](https://www.enisa.europa.eu/) provided an [interactive map](https://www.enisa.europa.eu/topics/csirts-in-europe/csirt-inventory/certs-by-country-interactive-map#country=Belgium) of currently known CSIRTs by country.  
+When you have threat actors inside your network **you want to identify them as fast as possible**, every second that they spend inside your network the outcome can be very but very destructive.  Now, your organization might not have a Security Incident Response Team (SIRT) or even a plan to build one, well [ENISA](https://www.enisa.europa.eu/) provided an [interactive map](https://www.enisa.europa.eu/topics/csirts-in-europe/csirt-inventory/certs-by-country-interactive-map#country=Belgium) of currently known CSIRTs by country.  
 
 Or may be your organization already have a Security Incident Response Team (SIRT), ask yourself how mature are they?  I invite you to use the [SIM3v1 self-assessment tool](https://www.enisa.europa.eu/topics/csirts-in-europe/csirt-capabilities/csirt-maturity/csirt-survey) from [ENISA](https://www.enisa.europa.eu/) to assess the maturity of your current incident response team. 
 
@@ -47,7 +47,7 @@ The CISCO Security Incident Response Team (SIRT) stated that “ post the compro
 This clearly suggests to me that the team had them on the radar for days or even weeks, learning about the attackers intentions and what's their next move going to be.
 
 # **Defense IV** – Learn and grasp the attacker real intentions 
-Now this is more a technique to better respond than a defensive method, if you have identified attackers within your organization network,  you can turn the situation in your favor by using the compromised asset(s) as a honeypot while in parallel containing (this should be dynamic in nature not linear), this will help identify IOCs (Indicators of Compromises) which your Security Incident Response Team (SIRT) can use to scan the enterprise for other compromised systems.  Failure to **properly contain** the incident can and will lead to **improper eradication**.
+Now this is more a technique to better respond than a defensive method, if you have identified attackers inside your organization network,  you can turn the situation in your favor by using the compromised asset(s) as a honeypot while in parallel containing (this should be dynamic in nature not linear), this will help identify IOCs (Indicators of Compromises) which your Security Incident Response Team (SIRT) can use to scan the enterprise for other compromised systems.  Failure to **properly contain** the incident can and will lead to **improper eradication**.
 
 To summarize make sure you do : 
 - Proper Scoping
