@@ -107,7 +107,7 @@ Make sure you can identify when your IT systems are in a **compliant state** and
 - Prior to allowing VPN connections from remote endpoints, ensure that posture checking is configured to enforce a baseline set of security controls
 - Segment your Orgranization for better security and also to respond better in the event of a security incident
 - Centralized log collection
-- Ensuring that backups are offline and periodically tested
+- Backup, backup and backup your data and ensure that backups are offline and periodically tested
 
 
 <br>
