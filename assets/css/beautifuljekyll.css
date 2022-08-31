@@ -866,14 +866,14 @@ table tr td :last-child {
 
 code {
   padding: 0.125rem 0.25rem;
-  color: #c7254e;
+  color: #adb5bd;
   background-color: #f9f2f4;
   border-radius: 0.25rem;
 }
 
 pre code {
   padding: 0;
-  background-color: transparent;
+  background-color: 1e1e1e;
   border-radius: 0;
 }
 
@@ -916,9 +916,7 @@ pre {
   border-right: 2px solid #444;
 }
 
-pre code {
-    color: #adb5bd;
-}
+
 
 /* Make line numbers unselectable: excludes line numbers from copy-paste user ops */
 .lineno {
