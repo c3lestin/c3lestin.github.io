@@ -873,7 +873,7 @@ code {
 
 pre code {
   padding: 0;
-  background-color: #1e1e1e;
+  background-color: transparent;
   border-radius: 0;
 }
 
