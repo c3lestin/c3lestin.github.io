@@ -55,7 +55,7 @@ To summarize make sure you do :
 - Complete eradication of the threat actor’s wrongdoing 
 - Recover your systems
 
-The rest of this post will briefly analyze the use of an attack method called **Living Off The Land** (LOtL)  leveraging  an operating system built-in tool for enumeration and persistence. I mean why drop other tools to the victim's system while you can already use the in-house tools. 
+The rest of this post will briefly analyze the use of an attack method called **Living Off The Land** (LOtL)  leveraging  an operating system built-in tools for enumeration and persistence. I mean why drop other tools to a victim's system while you can already use the in-house tools. 
 
 # **Defense V** – Monitor your employees’ IT system use behavior
 
