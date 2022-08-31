@@ -569,10 +569,11 @@ footer .footer-custom-content {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 0.9375rem;
   margin: 1.875rem 0;
+  color: #999;
 }
 
 .blog-tags span {
-  color: {{ site.text-col | default: "#404040" }};
+  color: {{ site.text-col | default: "#008AFF" }};
   opacity: 0.8;
 }
 
@@ -581,18 +582,16 @@ footer .footer-custom-content {
 }
 
 .blog-tags a {
-  color: {{ site.text-col | default: "#404040" }};
+  color: {{ site.text-col | default: "#008AFF" }};
   text-decoration: none;
   padding: 0 0.3125rem;
-  opacity: 0.8;
-  border: 1px solid transparent;
-  border-radius: 0.1875rem;
 }
 
 .blog-tags a:hover {
   opacity: 1;
-  color: {{ site.text-col | default: "#404040" }};
-  border-color: {{ site.text-col | default: "#404040" }};
+  color: {{ site.text-col | default: "#252525" }};
+  border-color: {{ site.text-col | default: "#737577" }};
+  border-radius: 2px;
 }
 
 .post-preview .blog-tags {
