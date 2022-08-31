@@ -573,7 +573,7 @@ footer .footer-custom-content {
 }
 
 .blog-tags span {
-  color: {{ site.text-col | default: "#008AFF" }};
+  color: {{ site.text-col | default: "#808080" }};
   opacity: 0.8;
 }
 
@@ -589,8 +589,8 @@ footer .footer-custom-content {
 
 .blog-tags a:hover {
   opacity: 1;
-  color: {{ site.text-col | default: "#252525" }};
-  border-color: {{ site.text-col | default: "#737577" }};
+  color: {{ site.text-col | default: "#008AFF" }};
+  border-color: {{ site.text-col | default: "#808080" }};
   border-radius: 2px;
 }
 
