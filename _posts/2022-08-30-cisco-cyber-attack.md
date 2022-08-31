@@ -101,7 +101,14 @@ rundll32.exe C:\windows\System32\comsvcs.dll, MiniDump [LSASS_PID] C:\windows\te
 # **Defense VI** – Know your system 
 Make sure you can identify when your IT systems are in a **compliant state** and when they are not, this is helpful in spotting intruders, beacons and detecting communication to C2 channels. 
 
-**Bonus** - [Track Latest IoCs via my GitHub](https://github.com/c3lestin/IOC-cyberwar-europe-What-to-watch-for/blob/main/README.md)
+
+# Recommendations from CISCO
+- Implementation of strong device verification mechanism by enforcing stricter controls around device status to limit or block enrollment and access from unmanaged or unknown devices. 
+- Prior to allowing VPN connections from remote endpoints, ensure that posture checking is configured to enforce a baseline set of security controls
+- Segment your Orgranization for better security and also to respond better in the event of a security incident
+- Centralized log collection
+- Ensuring that backups are offline and periodically tested
+
 
 <br>
 
