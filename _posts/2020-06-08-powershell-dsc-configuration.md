@@ -4,7 +4,7 @@ title: "Powershell: DSC Configuration (Part I)"
 date: 2020-06-08
 tags: [Automation,PowerShell,DSC,Everything]
 share-img: "https://github.com/c3lestin/c3lestin.github.io/raw/master/_img/pull_mode.png"
-cover-img: "https://github.com/c3lestin/c3lestin.github.io/raw/master/_img/posh.jpg"
+cover-img: "https://github.com/c3lestin/c3lestin.github.io/raw/master/_img/posh.png"
 ---
 
 Desired State Configuration [(DSC)](https://docs.microsoft.com/en-us/powershell/scripting/dsc/getting-started/wingettingstarted?view=powershell-7) automates administrations and make it less an hassle, it decreases the complexity of scripting in windows and Linux systems and increase the speed of iteration, it is basically configuration as code (Infrastructure As Code). This feature is available beginning the release of powershell version 4.<!--more-->
