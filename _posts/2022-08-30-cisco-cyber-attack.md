@@ -120,4 +120,12 @@ Security is the responsibility of everyone within your organization, the attacks
 
 **Your organization should achieve its mission thanks in part to security, not despite security.** 
 
+# Article links
+- [csirtsnetwork.eu](https://csirtsnetwork.eu/)
+- [MITRE ATT&CK Framework](https://attack.mitre.org/)
+- [Cisco Talos](https://blog.talosintelligence.com/2022/08/recent-cyber-attack.html)
+- [Cisco Blog](https://tools.cisco.com/security/center/resources/corp_network_security_incident)
+- [Cybersecuirty and Infrastructure Security Agency (CISA)](https://www.cisa.gov/cybersecurity)
+- [Microsoft Management and Tools](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc753343(v=ws.11))
+- [Wikipedia Vishing Definition](https://en.wikipedia.org/wiki/Voice_phishing)
 
