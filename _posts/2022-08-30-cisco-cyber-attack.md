@@ -40,11 +40,15 @@ When you have threat actors inside your network **you want to identify them as f
 
 [![eucsirt](https://github.com/c3lestin/c3lestin.github.io/raw/master/_img/eu-sirt.png)](https://www.enisa.europa.eu/topics/csirts-in-europe/csirt-inventory/certs-by-country-interactive-map#country=Belgium)
 
-
+&nbsp;
+&nbsp;
+&nbsp;
 
 Or may be your organization already have a Security Incident Response Team (SIRT), ask yourself how mature are they?  I invite you to use the [SIM3v1 self-assessment tool](https://www.enisa.europa.eu/topics/csirts-in-europe/csirt-capabilities/csirt-maturity/csirt-survey) from [ENISA](https://www.enisa.europa.eu/) to assess the maturity of your current incident response team. 
 
 [![sim3](https://github.com/c3lestin/c3lestin.github.io/raw/master/_img/simv3.png)](https://www.enisa.europa.eu/topics/csirts-in-europe/csirt-capabilities/csirt-maturity/csirt-survey)
+
+&nbsp;
 
 Now that I suggested some high-level defense mechanism, let us take a look further on some of the TTPs (Tactics, Techniques and Procedures) used by the attackers to pivot further post compromise, [the CISCO SIRT team already did a good job mapping the TTPs used by the attackers to the MITRE ATT&CK Framework](https://blog.talosintelligence.com/2022/08/recent-cyber-attack.html), I will briefly touch some of them, no need to re-write them in this article. 
 
