@@ -3,7 +3,7 @@ layout: post
 title: "News: Cisco Network recent cyber attack"
 subtitle: article by Marckenley Celestin
 cover-img: "https://github.com/c3lestin/c3lestin.github.io/raw/master/_img/cisco-hack.png"
-date: 2022-08-30
+date: 2022-08-29
 tags: [cybersecurity,news,cyberattack,Everything]
 share-img: "https://github.com/c3lestin/c3lestin.github.io/raw/master/_img/cisco-hack.png"
 ---
