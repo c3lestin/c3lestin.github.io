@@ -1,10 +1,11 @@
 ---
 layout: post
 title: "News: Cisco Network recent cyber attack"
+subtitle: article by Marckenley Celestin
+cover-img: "https://github.com/c3lestin/c3lestin.github.io/raw/master/_img/cisco-hack.png"
 date: 2022-08-30
 tags: [cybersecurity,news,cyberattack,Everything]
 share-img: "https://github.com/c3lestin/c3lestin.github.io/raw/master/_img/cisco-hack.png"
-cover-img: "https://github.com/c3lestin/c3lestin.github.io/raw/master/_img/cisco-hack.png"
 ---
 
 This blog post is to share with you 6 handy defensive measures that could have prevented the use of certain TTPs related to the [recent attack on CISCO](https://blog.talosintelligence.com/2022/08/recent-cyber-attack.html). Now, CISCO knew about the incident since **May 24th** and only disclosed it on **August 10th** after the attackers have [leaked confidential data](https://tools.cisco.com/security/center/resources/corp_network_security_incident) in the dark web. <!--more-->
