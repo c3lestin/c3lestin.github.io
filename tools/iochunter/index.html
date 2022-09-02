@@ -49,6 +49,7 @@
     <script src="js/csv_to_html_table.js"></script>
 
     <script>
+        var link = "https://www.virustotal.com/gui/search/";
         function format_link(link) {
             if (link)
                 return "<a href='" + link + "' target='_blank'>" + link + "</a>";
@@ -79,7 +80,7 @@
             },
           
             custom_formatting: [
-                [1, https://www.virustotal.com/gui/search/],
+                [1, format_link],
                 
             ]
         });
