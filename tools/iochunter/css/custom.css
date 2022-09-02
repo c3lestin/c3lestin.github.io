@@ -106,3 +106,19 @@ h2 {
   margin-right: 8px;
   opacity: 0.7;
 }
+
+.topbar {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    font-family: 'Lora', 'Times New Roman', serif;
+    font-size: 1.125rem;
+    color: #b0b1b2;
+    position: relative;
+    background-color: #2d2e2e;
+    overflow-wrap: break-word;
+}
