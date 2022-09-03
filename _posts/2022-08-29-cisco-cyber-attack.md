@@ -142,3 +142,6 @@ Security is the responsibility of everyone within your organization, the attacks
 - [Microsoft Management and Tools](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc753343(v=ws.11))
 - [Wikipedia Vishing Definition](https://en.wikipedia.org/wiki/Voice_phishing)
 
+# Daily IOC Intel
+- [Cybershelter IOC Hunter](https://blog.cybershelter.be/iochunter/)
+
