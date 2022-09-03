@@ -1,0 +1,39 @@
+/* Custom styles */
+/*
+DePaul IHS
+*/
+
+
+.topbar {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    color: #b0b1b2;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+    display: block;
+    align-items: center;
+    padding: .5rem 1rem;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    background-color: #252525;
+    border-bottom: 1px solid #252525;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    transition: padding .5s ease-in-out;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+.container-fluid {
+    padding-top: 1.25rem;
+    margin-top: 8rem;
+}
