@@ -39,7 +39,7 @@ CISCO knew about the incident since **May 24th** and disclosed it on **August 10
 
 # **Defense III** – Build an Incident Response Team 
 
-When you have threat actors inside your network **you want to identify them as fast as possible**, every second that they spend inside your network the outcome can be very but very destructive.  Now, your organization might not have a Security Incident Response Team (SIRT) or even a plan to build one, well [ENISA](https://www.enisa.europa.eu/) provided an [interactive map](https://www.enisa.europa.eu/topics/csirts-in-europe/csirt-inventory/certs-by-country-interactive-map#country=Belgium) of currently known CSIRTs by country.  
+When you have threat actors inside your network **you want to identify them as fast as possible**, every second that they spend inside your network the outcome can be very but very destructive.  Now, your organization might not have a Security Incident Response Team (SIRT) or even a plan to build one, well [ENISA](https://www.enisa.europa.eu/){:target="_blank"} provided an [interactive map](https://www.enisa.europa.eu/topics/csirts-in-europe/csirt-inventory/certs-by-country-interactive-map#country=Belgium){:target="_blank"} of currently known CSIRTs by country.  
 
 [![eucsirt](https://github.com/c3lestin/c3lestin.github.io/raw/master/_img/eu-sirt.png)](https://www.enisa.europa.eu/topics/csirts-in-europe/csirt-inventory/certs-by-country-interactive-map#country=Belgium){:target="_blank"}
 
