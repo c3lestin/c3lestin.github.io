@@ -143,5 +143,5 @@ Security is the responsibility of everyone within your organization, the attacks
 - [Wikipedia Vishing Definition](https://en.wikipedia.org/wiki/Voice_phishing)
 
 # Daily IOC Intel
-- [Cybershelter IOC Hunter](https://blog.cybershelter.be/iochunter/)
+- [Cybershelter IOC Hunter](https://blog.cybershelter.be/iochunter/){:target="_blank"}
 
