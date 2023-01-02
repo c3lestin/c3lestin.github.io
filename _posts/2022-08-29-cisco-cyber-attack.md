@@ -8,7 +8,7 @@ tags: [cybersecurity,news,cyberattack,Everything]
 share-img: "https://github.com/c3lestin/c3lestin.github.io/raw/master/_img/cisco-hack.png"
 ---
 
-This blog post is to share with you some preventive measures that you can apply right now to prepare and build your security defense in the event of a similar attack at your Organization, those suggestions will be related to the [recent attack on CISCO](https://blog.talosintelligence.com/2022/08/recent-cyber-attack.html){:target="_blank"}.
+This blog post is to share with you some preventive measures that you can apply right now to prepare and build your security defense in the event of a similar attack at your Organization, these suggestions will be related to the [recent attack on CISCO](https://blog.talosintelligence.com/2022/08/recent-cyber-attack.html){:target="_blank"}.
 <!--more-->
 
 CISCO knew about the incident since **May 24th** and disclosed it on **August 10th** after the attackers have [leaked confidential data](https://tools.cisco.com/security/center/resources/corp_network_security_incident){:target="_blank"} in the dark web. 
