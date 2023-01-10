@@ -1,0 +1,30 @@
+scroll-top-wrapper {
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  border: none; /* Remove borders */
+  cursor: pointer;
+  outline: none; /* Remove outline */
+  font-size: 18px; /* Increase font size */
+  background-color: #77777763;
+  color: #eee;
+  text-align: center;
+  z-index: 99999999;
+  width: 50px;
+  height: 48px;
+  line-height: 60px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  -webkit-transition: all .10s ease-in-out;
+  -moz-transition: all .10s ease-in-out;
+  -ms-transition: all .10s ease-in-out;
+  -o-transition: all .10s ease-in-out;
+  transition: all .10s ease-in-out;
+}
+
+.scroll-top-wrapper.hidden {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
