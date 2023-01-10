@@ -4,7 +4,7 @@
 # baseurl is the website's URL without the hostname
 
 # If you are building a simple GitHub user page (http://username.github.io) then use these settings:
-url: "https://blog.cybershelter.be"
+url: "https://cybershelter.be"
 baseurl: ""
 excerpt_separator: <!--more-->
 
@@ -118,7 +118,7 @@ share-links-active:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "blog.cybershelter.be"
+url-pretty: "cybershelter.be"
 
 # Whether or not to show an excerpt for every blog post in the feed page
 feed_show_excerpt: true
