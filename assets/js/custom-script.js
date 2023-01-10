@@ -28,4 +28,3 @@ window.addEventListener('scroll', () => {
     window.requestAnimationFrame(checkScrollTop);
     
 });
-Footer
