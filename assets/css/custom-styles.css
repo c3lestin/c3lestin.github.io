@@ -28,3 +28,8 @@
     opacity: 0;
     transition: opacity 0.5s ease-out;
 }
+
+.scroll-top-wrapper:hover {
+ background-color: #22B573;
+}
+
