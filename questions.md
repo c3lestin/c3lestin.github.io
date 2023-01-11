@@ -1,5 +1,0 @@
----
-layout: questions
----
-
-# Some questions
