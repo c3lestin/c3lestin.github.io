@@ -1,5 +1,5 @@
 ---
-layout: questions
+layout: question
 ---
 
 # Some questions
