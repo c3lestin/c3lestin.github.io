@@ -5,7 +5,7 @@ subtitle: It's all about IT Security, Automation, Artificial Intelligence, Scien
 ---
 
 
-We are living in the era of data, in our modern society everything is being digitalized we are seeing also an exponential growth of online devices that can be hacked, thus data protection should be taken very seriously, been passionate about artificial intelligence and IT security for a very long time, i constantly learning new things, i build this blog it's  primary goal is to share my discoveries.  
+In this data-centric era, digitalization has become the norm in society and cyber security threats continue to rise. As a long-time enthusiast of both AI and IT security, I strive to stay up-to-date on the latest developments in these fields. This blog is my opportunity to share my insights and findings with others.
 
 
 # Recent Articles
