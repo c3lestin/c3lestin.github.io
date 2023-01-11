@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>What is the capital of France?</p>
+
+<form>
+  <input type="radio" id="a1" name="q1" value="Paris">
+  <label for="a1">Paris</label>
+  
+  <br>
+  
+  <input type="radio" id="a2" name="q1" value="London">
+  <label for="a2">London</label>
+  
+  <br>
+  
+  <input type="radio" id="a3" name="q1" value="Rome">
+  <label for="a3">Rome</label>
+  
+  <br>
+  
+  <input type="button" value="Submit" onclick="checkAnswer()">
+</form> 
+
+<p id="result"></p>
+
+<script>
+function checkAnswer() {
+  var radios = document.getElementsByName("q1");
+  var i;
+  for (i = 0; i < radios.length; i++) {
+    if (radios[i].checked) {
+      if (radios[i].value === "Paris") {
+        document.getElementById("result").innerHTML = "Correct!";
+      } else {
+        document.getElementById("result").innerHTML = "Incorrect, The correct answer is Paris";
+      }
+      break;
+    }
+  }
+}
+</script>
+
+</body>
+</html>
