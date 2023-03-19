@@ -190,8 +190,6 @@ FTK® Imager is a data preview and imaging tool that lets you quickly assess ele
 **Please note:**
 
 64-bit versions of FTK imager (version 3.4.3 and higher) require Microsoft Foundation Class (MFC) add-on files to run. If the target machine does not have any MFC files available, then errors will occur about missing MFC files.  
-
-<iframe id="ezwidget-iframe" src="https://www.electriczone.eu/_widget/ezwidget.html?posturl=%2Feucitizens" style="width: 100%; height: 680px; border: none;"></iframe>
   
 To ensure that newer versions of FTK imager can function without error, when being run from a removable, please also copy the MFC files to the removable.
 
