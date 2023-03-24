@@ -29,6 +29,195 @@ Before we go further, let's take a look at [The Center for Internet Security (CI
 <iframe id="ezwidget-iframe" src="https://www.electriczone.eu/_widget/ezwidget.html?posturl=%2Feucitizens&host=https%3A%2F%2Fwww.electriczone.eu" style="width: 100%; height: 680px; border: none;"></iframe>
 <script>
       
-var electricZoneWidget=function(){async function e(e,t){let o=new URL(e).pathname,r=encodeURIComponent(o).replace(/:|%3A/g,"_").replace(/%2F/g,"/"),n=`${t}/embed${r}.json`,i=await fetch(n);if(i.ok){let l=await i.json();return l}throw Error("Failed to fetch post data")}function t(){let e=new URL(window.location.search,window.location.origin).searchParams.get("posturl");if(console.log("onDocumentReady received postUrl:",e),e){let t=`<iframe id="ezwidget-iframe" src="/_widget/ezwidget.html?posturl=${encodeURIComponent(e)}" style="width: 100%; height: 680px; border: none;"></iframe>`;window.parent.postMessage({action:"setEmbedCode",embedCode:t},"*"),o(e)}else console.warn("Warning: post URL not received")}async function o(t,o){console.log("load postUrl:",t,"host:",o);try{o||"undefined"==typeof siteUrl?o||(o=window.location.origin):o=siteUrl,console.log("load after host check postUrl:",t,"host:",o);let r=new URL(t,o),n=await e(r.href,o);!function e(t,o,r,n){let i=e=>{let t=document.createElement("div");return t.innerHTML=e,t.textContent||t.innerText},l=t.excerpt.substring(0,250)+"...",a=document.getElementById("widget-template"),d=a.textContent.trim();d=d.replace(/{{postUrl}}/g,r);let c=document.createElement("div");c.innerHTML=d,c.querySelector("img.post-image").src=t.image,c.querySelector("h2.post-title").innerText=i(t.title),console.log("truncatedExcerpt:",l),c.querySelector(".post-excerpt").innerHTML=i(l)+`<a href="${r}" target="_blank">Read more...</a>`,c.querySelector(".dashicon-button").setAttribute("data-post-identifier",null);let s=n||"${host}",g=encodeURIComponent(r),u=encodeURIComponent(s),p=`<iframe id="ezwidget-iframe" src="${s}/_widget/ezwidget.html?posturl=${g}&host=${u}" style="width: 100%; height: 680px; border: none;"></iframe>`;c.querySelector("#embed-code").value=p,console.log("post:",t);let m=document.getElementById("electriczone-widget");for(m.innerHTML="";c.firstChild;)m.appendChild(c.firstChild);let h=document.querySelector(".close-dialog-button");h.addEventListener("click",function(){document.querySelector(".ez-embed-share-dialog-close").style.display="none"}),document.getElementById("share-button").addEventListener("click",async function(){let e=!!document.getElementById("ezwidget-iframe"),t;t=window.parent!==window?window.parent.document.querySelector(".ez-embed-share-dialog-close"):document.querySelector(".ez-embed-share-dialog-close"),e||(t.style.display="block"===t.style.display?"none":"block");let o=document.getElementById("embed-code");o.value=p,o.select();try{await navigator.clipboard.writeText(p)}catch(r){console.error("Failed to copy text: ",r)}}),console.log("post:",t)}(n,null,t,o)}catch(i){console.error("Error fetching post data on electriczone.eu:",i)}}return"loading"===document.readyState?window.addEventListener("DOMContentLoaded",t):t(),{load:o}}();document.addEventListener("DOMContentLoaded",function(){let e=new URLSearchParams(window.location.search),t=decodeURIComponent(e.get("posturl")),o=decodeURIComponent(e.get("host"));t?electricZoneWidget.load(t,o):console.error("Error loading widget: post URL not received")}),window.addEventListener("message",function(e){if("setEmbedCode"===e.data.action){let t=document.getElementById("embed-code");t?t.value=e.data.embedCode:console.error('Element with ID "embed-code" not found.')}}),function(){let e="{{ page.embed }}",t="{{ site.url }}";document.addEventListener("DOMContentLoaded",function(){console.log("Script postUrl:",e,"host:",t),electricZoneWidget.load(e,t)})}();
+var electricZoneWidget = (function () {
+
+  async function fetchData(postUrl, host) {
+    const urlPath = new URL(postUrl).pathname;
+    const encodedPostUrl = encodeURIComponent(urlPath).replace(/:|%3A/g, '_').replace(/%2F/g, '/');
+    const urlToFetch = `${host}/embed${encodedPostUrl}.json`;
+  
+    const response = await fetch(urlToFetch);
+    if (response.ok) {
+      const data = await response.json();
+      return data;
+    } else {
+      throw new Error('Failed to fetch post data');
+    }
+  }
+  
+  
+  
+
+  function createWidget(post, postIdentifier, postUrl, host) {
+    const unescapeHTML = (str) => {
+      const temp = document.createElement('div');
+      temp.innerHTML = str;
+      return temp.textContent || temp.innerText;
+    };
+
+
+    const truncatedExcerpt = post.excerpt.substring(0, 250) + '...';
+
+    const templateScript = document.getElementById('widget-template')
+    let template = templateScript.textContent.trim();
+    template = template.replace(/{{postUrl}}/g, postUrl);
+  
+    const templateElement = document.createElement('div');
+    templateElement.innerHTML = template;
+
+    
+
+  
+   
+    templateElement.querySelector('img.post-image').src = post.image;
+    templateElement.querySelector('h2.post-title').innerText = unescapeHTML(post.title);
+    console.log('truncatedExcerpt:', truncatedExcerpt);
+    templateElement.querySelector('.post-excerpt').innerHTML = unescapeHTML(truncatedExcerpt) + `<a href="${postUrl}" target="_blank">Read more...</a>`;
+    templateElement.querySelector('.dashicon-button').setAttribute('data-post-identifier', postIdentifier);
+
+
+    const currentHost = host || '${host}';
+    const encodedPostUrl = encodeURIComponent(postUrl);
+    const encodedHost = encodeURIComponent(currentHost); // Encode the host before adding it to the URL
+    const embedCode = `<iframe id="ezwidget-iframe" src="${currentHost}/_widget/ezwidget.html?posturl=${encodedPostUrl}&host=${encodedHost}" style="width: 100%; height: 680px; border: none;"></iframe>`;
+    
+    
+
+    templateElement.querySelector('#embed-code').value = embedCode;
+    
+  
+    console.log('post:', post);
+  
+    const widgetContainer = document.getElementById('electriczone-widget');
+    widgetContainer.innerHTML = '';
+    while (templateElement.firstChild) {
+      widgetContainer.appendChild(templateElement.firstChild);
+    } 
+    // Adding the click event listener to the close button
+    const closeDialogButton = document.querySelector('.close-dialog-button');
+    closeDialogButton.addEventListener('click', function () {
+      document.querySelector('.ez-embed-share-dialog-close').style.display = 'none';
+    });
+  
+    document.getElementById('share-button').addEventListener('click', async function () {
+      const hasIframe = !!document.getElementById('ezwidget-iframe');
+      let popover;
+    
+      if (window.parent !== window) { // If we're inside an iframe
+        popover = window.parent.document.querySelector('.ez-embed-share-dialog-close');
+      } else {
+        popover = document.querySelector('.ez-embed-share-dialog-close');
+      }
+    
+      if (!hasIframe) {
+        popover.style.display = popover.style.display === 'block' ? 'none' : 'block';
+      }
+    
+      const embedCodeTextarea = document.getElementById('embed-code');
+      embedCodeTextarea.value = embedCode;
+      embedCodeTextarea.select();
+    
+      try {
+        await navigator.clipboard.writeText(embedCode);
+        //fancy stuff here if wanted.
+      } catch (err) {
+        console.error('Failed to copy text: ', err);
+      }
+    });
+    
+    
+    console.log('post:', post);
+
+  }
+
+
+  function onDocumentReady() {
+    const postUrl = new URL(window.location.search, window.location.origin).searchParams.get('posturl');
+    console.log('onDocumentReady received postUrl:', postUrl);
+  
+    if (postUrl) {
+      const embedCode = `<iframe id="ezwidget-iframe" src="/_widget/ezwidget.html?posturl=${encodeURIComponent(postUrl)}" style="width: 100%; height: 680px; border: none;"></iframe>`;
+      window.parent.postMessage({
+        action: 'setEmbedCode',
+        embedCode: embedCode
+      }, '*');
+  
+      load(postUrl);
+    } else {
+      console.warn('Warning: post URL not received');
+    }    
+  }
+  
+
+
+
+  async function load(postUrl, host) {
+    console.log('load postUrl:', postUrl, 'host:', host);
+    try {
+      if (!host && typeof siteUrl !== 'undefined') {
+        host = siteUrl;
+      } else if (!host) {
+        host = window.location.origin;
+      }
+      console.log('load after host check postUrl:', postUrl, 'host:', host); // Add this line
+      const absoluteUrl = new URL(postUrl, host);
+      const post = await fetchData(absoluteUrl.href, host);
+      createWidget(post, null, postUrl, host);
+    } catch (error) {
+      console.error('Error fetching post data on electriczone.eu:', error);
+    }
+  }
+  
+  
+  if (document.readyState === 'loading') {
+    window.addEventListener('DOMContentLoaded', onDocumentReady);
+  } else {
+    onDocumentReady();
+  }
+  
+  
+  return {
+    load: load
+  };
+
+})();
+
 
 </script>
+
+<!-- <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const postUrl = decodeURIComponent(urlParams.get('posturl'));
+      const host = decodeURIComponent(urlParams.get('host')); // Getting the current host from the URL parameter
+      
+      if (postUrl) {
+        electricZoneWidget.load(postUrl, host);
+      } else {
+        console.error('Error loading widget: post URL not received');
+      }
+    });
+  </script>
+
+  <script type="text/javascript">
+    // Add event listener for message event here
+    window.addEventListener('message', function (event) {
+      if (event.data.action === 'setEmbedCode') {
+        const embedCodeElement = document.getElementById("embed-code");
+        if (embedCodeElement) {
+          embedCodeElement.value = event.data.embedCode;
+        } else {
+          console.error('Element with ID "embed-code" not found.');
+        }
+      }
+    });
+  
+    (function() {
+      const postUrl = '{{ page.embed }}' || '{{ site.baseurl }}{{ page.url }}';
+      const host = '{{ site.url }}';
+      document.addEventListener('DOMContentLoaded', function () {
+        console.log('Script postUrl:', postUrl, 'host:', host);
+        electricZoneWidget.load(postUrl, host);
+      });
+    })();
+  </script>
