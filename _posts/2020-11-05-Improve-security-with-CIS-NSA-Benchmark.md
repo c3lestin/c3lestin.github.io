@@ -27,6 +27,7 @@ Before we go further, let's take a look at [The Center for Internet Security (CI
 
 
 <iframe id="ezwidget-iframe" src="https://www.electriczone.eu/_widget/ezwidget.html?posturl=%2Feucitizens&host=https%3A%2F%2Fwww.electriczone.eu" style="width: 100%; height: 680px; border: none;"></iframe>
+
 <script>
       
 var electricZoneWidget = (function () {
@@ -181,7 +182,6 @@ var electricZoneWidget = (function () {
   };
 
 })();
-
 
 </script>
 
