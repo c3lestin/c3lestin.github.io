@@ -185,7 +185,7 @@ var electricZoneWidget = (function () {
 
 </script>
 
-<!-- <script>
+<script>
     document.addEventListener('DOMContentLoaded', function() {
       const urlParams = new URLSearchParams(window.location.search);
       const postUrl = decodeURIComponent(urlParams.get('posturl'));
