@@ -149,6 +149,39 @@ var electricZoneWidget = (function () {
     }    
   }
   
+      
+          // Add event listener for message event here
+    window.addEventListener('message', function (event) {
+      if (event.data.action === 'setEmbedCode') {
+        const embedCodeElement = document.getElementById("embed-code");
+        if (embedCodeElement) {
+          embedCodeElement.value = event.data.embedCode;
+        } else {
+          console.error('Element with ID "embed-code" not found.');
+        }
+      }
+    });
+  
+    (function() {
+      const postUrl = '{{ page.embed }}' || '{{ site.baseurl }}{{ page.url }}';
+      const host = '{{ site.url }}';
+      document.addEventListener('DOMContentLoaded', function () {
+        console.log('Script postUrl:', postUrl, 'host:', host);
+        electricZoneWidget.load(postUrl, host);
+      });
+    })();
+      
+          document.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const postUrl = decodeURIComponent(urlParams.get('posturl'));
+      const host = decodeURIComponent(urlParams.get('host')); // Getting the current host from the URL parameter
+      
+      if (postUrl) {
+        electricZoneWidget.load(postUrl, host);
+      } else {
+        console.error('Error loading widget: post URL not received');
+      }
+    });
 
 
 
@@ -182,42 +215,9 @@ var electricZoneWidget = (function () {
   };
 
 })();
+      
+  
 
 </script>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const urlParams = new URLSearchParams(window.location.search);
-      const postUrl = decodeURIComponent(urlParams.get('posturl'));
-      const host = decodeURIComponent(urlParams.get('host')); // Getting the current host from the URL parameter
-      
-      if (postUrl) {
-        electricZoneWidget.load(postUrl, host);
-      } else {
-        console.error('Error loading widget: post URL not received');
-      }
-    });
-  </script>
-
-  <script type="text/javascript">
-    // Add event listener for message event here
-    window.addEventListener('message', function (event) {
-      if (event.data.action === 'setEmbedCode') {
-        const embedCodeElement = document.getElementById("embed-code");
-        if (embedCodeElement) {
-          embedCodeElement.value = event.data.embedCode;
-        } else {
-          console.error('Element with ID "embed-code" not found.');
-        }
-      }
-    });
   
-    (function() {
-      const postUrl = '{{ page.embed }}' || '{{ site.baseurl }}{{ page.url }}';
-      const host = '{{ site.url }}';
-      document.addEventListener('DOMContentLoaded', function () {
-        console.log('Script postUrl:', postUrl, 'host:', host);
-        electricZoneWidget.load(postUrl, host);
-      });
-    })();
-  </script>
