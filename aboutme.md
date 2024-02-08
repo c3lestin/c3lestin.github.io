@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About me
-subtitle: Digital Forensics and Incident Response (DFIR) Professional
+subtitle: IT Security Professional
 ---
 
 Highly motivated individual with over 10 years in the industry, specializing in cybersecurity. Skilled in maintaining and overseeing computer networks, ensuring smooth and secure operations. Expert in designing robust security architectures, implementing measures and controls guided by the industry’s state of the art cybersecurity framework such as NIST, ISO27000, and COBIT. Holds significant technical expertise acknowledged by numerous certifications in IT security. Ability to effectively communicate from a technical level through to C-suite level.
