@@ -4,7 +4,7 @@ title: About me
 subtitle: Digital Forensics and Incident Response (DFIR) Professional
 ---
 
-6+ years as Cyber Security Professional with success overseeing, maintaining computer networks up-to-date and ensuring they are running smoothly and 2 years working as a DFIR professional. Set up security measures that help prevent security breaches, as well as analyzing any breaches that do occur and take steps to mitigate the risks. I work with various industry standards frameworks (e.g. CoBiT, ITIL, ISO27000…(ISMS); NIST Framework, (Open Source - OSSTMM).
+Highly motivated individual with over 10 years in the industry, specializing in cybersecurity. Skilled in maintaining and overseeing computer networks, ensuring smooth and secure operations. Expert in designing robust security architectures, implementing measures and controls guided by the industry’s state of the art cybersecurity framework such as NIST, ISO27000, and COBIT. Holds significant technical expertise acknowledged by numerous certifications in IT security. Ability to effectively communicate from a technical level through to C-suite level.
 
 # Contact Info
 * [Email: celestin@cybershelter.be](mailto:celestin@cybershelter.be)
